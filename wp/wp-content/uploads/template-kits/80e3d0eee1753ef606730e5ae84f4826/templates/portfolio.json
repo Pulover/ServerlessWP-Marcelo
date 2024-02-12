@@ -1,0 +1,747 @@
+{
+    "version": "0.4",
+    "title": "Portfolio",
+    "type": "page",
+    "metadata": {
+        "template_type": "single-page",
+        "include_in_zip": "1",
+        "elementor_pro_required": null,
+        "wp_page_template": "elementor_header_footer"
+    },
+    "content": [
+        {
+            "id": "2d4b0d62",
+            "settings": {
+                "padding": {
+                    "unit": "px",
+                    "top": "250",
+                    "right": "0",
+                    "bottom": "150",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_image": {
+                    "url": "https:\/\/templatekit.kotakkuning.com\/foturo\/wp-content\/uploads\/sites\/6\/2021\/11\/photographer-working-checking-photo-concept-resize.jpg",
+                    "id": 724
+                },
+                "background_position": "center center",
+                "background_size": "cover",
+                "background_overlay_background": "gradient",
+                "background_overlay_opacity": {
+                    "unit": "px",
+                    "size": 1,
+                    "sizes": []
+                },
+                "__globals__": {
+                    "background_overlay_color": "",
+                    "background_overlay_color_b": "globals\/colors?id=primary"
+                },
+                "background_overlay_color": "#04050752",
+                "background_overlay_color_b": "#0A0B0F",
+                "background_overlay_color_b_stop": {
+                    "unit": "%",
+                    "size": 80,
+                    "sizes": []
+                }
+            },
+            "elements": [
+                {
+                    "id": "40bce519",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null
+                    },
+                    "elements": [
+                        {
+                            "id": "9a82277",
+                            "settings": {
+                                "title": "Portfolio",
+                                "align": "center",
+                                "__globals__": {
+                                    "title_color": "",
+                                    "typography_typography": "globals\/typography?id=secondary"
+                                },
+                                "title_color": "#FFFFFF",
+                                "_animation": "fadeInUp",
+                                "_animation_delay": 50
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "heading",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                }
+            ],
+            "isInner": false,
+            "elType": "section"
+        },
+        {
+            "id": "17b3742e",
+            "settings": {
+                "padding": {
+                    "unit": "px",
+                    "top": "50",
+                    "right": "0",
+                    "bottom": "120",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "padding_mobile": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "100",
+                    "left": "0",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "4ae2d059",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null
+                    },
+                    "elements": [
+                        {
+                            "id": "339e8cf8",
+                            "settings": {
+                                "structure": "20",
+                                "margin": {
+                                    "unit": "px",
+                                    "top": "50",
+                                    "right": 0,
+                                    "bottom": "0",
+                                    "left": 0,
+                                    "isLinked": false
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "id": "8db86a4",
+                                    "settings": {
+                                        "_column_size": 50,
+                                        "_inline_size": null
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "4b7d1703",
+                                            "settings": {
+                                                "premium_banner_image": {
+                                                    "url": "https:\/\/templatekit.kotakkuning.com\/foturo\/wp-content\/uploads\/sites\/6\/2021\/08\/videographer-shoots-how-a-talented-latin-american-resize.jpg",
+                                                    "id": 637
+                                                },
+                                                "thumbnail_size": "custom",
+                                                "thumbnail_custom_dimension": {
+                                                    "width": "800",
+                                                    "height": "890"
+                                                },
+                                                "premium_banner_image_animation": "animation11",
+                                                "premium_banner_title": "John Smith Official Music Video",
+                                                "premium_banner_description": "",
+                                                "premium_banner_more_text": "Click Here",
+                                                "premium_banner_title_margin": {
+                                                    "unit": "px",
+                                                    "top": "50",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "premium_banner_desc_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "100",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "gradient_color_background": "gradient",
+                                                "gradient_color_color": "#11100E9E",
+                                                "gradient_color_color_b": "#00000080",
+                                                "__globals__": {
+                                                    "premium_banner_color_of_title": "globals\/colors?id=text",
+                                                    "premium_banner_title_typography_typography": "globals\/typography?id=48d72df"
+                                                },
+                                                "_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                },
+                                                "_padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                },
+                                                "_animation": "fadeInUp",
+                                                "_animation_delay": 200
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "premium-addon-banner",
+                                            "elType": "widget"
+                                        },
+                                        {
+                                            "id": "776d5ee3",
+                                            "settings": {
+                                                "premium_banner_image": {
+                                                    "url": "https:\/\/templatekit.kotakkuning.com\/foturo\/wp-content\/uploads\/sites\/6\/2021\/11\/adam-borkowski-RljS8Btjjb4-resize.jpg",
+                                                    "id": 704
+                                                },
+                                                "thumbnail_size": "custom",
+                                                "thumbnail_custom_dimension": {
+                                                    "width": "600",
+                                                    "height": "650"
+                                                },
+                                                "premium_banner_image_animation": "animation11",
+                                                "premium_banner_title": "Jack & Lin Company",
+                                                "premium_banner_description": "",
+                                                "premium_banner_more_text": "Click Here",
+                                                "premium_banner_title_margin": {
+                                                    "unit": "px",
+                                                    "top": "50",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "premium_banner_desc_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "100",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "gradient_color_background": "gradient",
+                                                "gradient_color_color": "#11100E9E",
+                                                "gradient_color_color_b": "#00000080",
+                                                "__globals__": {
+                                                    "premium_banner_color_of_title": "globals\/colors?id=text",
+                                                    "premium_banner_title_typography_typography": "globals\/typography?id=48d72df"
+                                                },
+                                                "_animation": "fadeInUp",
+                                                "_animation_delay": 500
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "premium-addon-banner",
+                                            "elType": "widget"
+                                        },
+                                        {
+                                            "id": "7dd08d",
+                                            "settings": {
+                                                "premium_banner_image": {
+                                                    "url": "https:\/\/templatekit.kotakkuning.com\/foturo\/wp-content\/uploads\/sites\/6\/2021\/11\/monika-grabkowska-xr55g7_0kQ4-resize.jpg",
+                                                    "id": 685
+                                                },
+                                                "thumbnail_size": "custom",
+                                                "thumbnail_custom_dimension": {
+                                                    "width": "600",
+                                                    "height": "750"
+                                                },
+                                                "premium_banner_image_animation": "animation11",
+                                                "premium_banner_title": "Hanamuso Restaurant ",
+                                                "premium_banner_description": "",
+                                                "premium_banner_more_text": "Click Here",
+                                                "premium_banner_title_margin": {
+                                                    "unit": "px",
+                                                    "top": "50",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "premium_banner_desc_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "100",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "gradient_color_background": "gradient",
+                                                "gradient_color_color": "#11100E9E",
+                                                "gradient_color_color_b": "#00000080",
+                                                "__globals__": {
+                                                    "premium_banner_color_of_title": "globals\/colors?id=text",
+                                                    "premium_banner_title_typography_typography": "globals\/typography?id=48d72df"
+                                                },
+                                                "_animation": "fadeInUp",
+                                                "_animation_delay": 700
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "premium-addon-banner",
+                                            "elType": "widget"
+                                        }
+                                    ],
+                                    "isInner": true,
+                                    "elType": "column"
+                                },
+                                {
+                                    "id": "63dca97c",
+                                    "settings": {
+                                        "_column_size": 50,
+                                        "_inline_size": null
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "75dc9d04",
+                                            "settings": {
+                                                "premium_banner_image": {
+                                                    "url": "https:\/\/templatekit.kotakkuning.com\/foturo\/wp-content\/uploads\/sites\/6\/2021\/11\/peter-broomfield-m3m-lnR90uM-resize.jpg",
+                                                    "id": 692
+                                                },
+                                                "thumbnail_size": "custom",
+                                                "thumbnail_custom_dimension": {
+                                                    "width": "800",
+                                                    "height": "400"
+                                                },
+                                                "premium_banner_image_animation": "animation11",
+                                                "premium_banner_title": "Alexia Project",
+                                                "premium_banner_description": "",
+                                                "premium_banner_more_text": "Click Here",
+                                                "premium_banner_title_margin": {
+                                                    "unit": "px",
+                                                    "top": "50",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "premium_banner_desc_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "100",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "gradient_color_background": "gradient",
+                                                "gradient_color_color": "#11100E9E",
+                                                "gradient_color_color_b": "#00000080",
+                                                "__globals__": {
+                                                    "premium_banner_color_of_title": "globals\/colors?id=text",
+                                                    "premium_banner_title_typography_typography": "globals\/typography?id=48d72df"
+                                                },
+                                                "_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                },
+                                                "_padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                },
+                                                "_animation": "fadeInUp",
+                                                "_animation_delay": 300
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "premium-addon-banner",
+                                            "elType": "widget"
+                                        },
+                                        {
+                                            "id": "5503e4e7",
+                                            "settings": {
+                                                "premium_banner_image": {
+                                                    "url": "https:\/\/templatekit.kotakkuning.com\/foturo\/wp-content\/uploads\/sites\/6\/2021\/08\/mae-mu-3WLcQWnHB_Q-unsplash-resize.jpg",
+                                                    "id": 150
+                                                },
+                                                "thumbnail_size": "custom",
+                                                "thumbnail_custom_dimension": {
+                                                    "width": "800",
+                                                    "height": "600"
+                                                },
+                                                "premium_banner_image_animation": "animation11",
+                                                "premium_banner_title": "Fillo Coffee Product Photo",
+                                                "premium_banner_description": "",
+                                                "premium_banner_more_text": "Click Here",
+                                                "premium_banner_title_margin": {
+                                                    "unit": "px",
+                                                    "top": "50",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "premium_banner_desc_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "100",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "gradient_color_background": "gradient",
+                                                "gradient_color_color": "#11100E9E",
+                                                "gradient_color_color_b": "#00000080",
+                                                "__globals__": {
+                                                    "premium_banner_color_of_title": "globals\/colors?id=text",
+                                                    "premium_banner_title_typography_typography": "globals\/typography?id=48d72df"
+                                                },
+                                                "_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                },
+                                                "_padding": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                },
+                                                "_animation": "fadeInUp",
+                                                "_animation_delay": 400
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "premium-addon-banner",
+                                            "elType": "widget"
+                                        },
+                                        {
+                                            "id": "5d3d9699",
+                                            "settings": {
+                                                "premium_banner_image": {
+                                                    "url": "https:\/\/templatekit.kotakkuning.com\/foturo\/wp-content\/uploads\/sites\/6\/2021\/11\/robert-torres-JhPeYGhJKHo-resize.jpg",
+                                                    "id": 700
+                                                },
+                                                "thumbnail_size": "custom",
+                                                "thumbnail_custom_dimension": {
+                                                    "width": "600",
+                                                    "height": "750"
+                                                },
+                                                "premium_banner_image_animation": "animation11",
+                                                "premium_banner_title": "One Max Techno",
+                                                "premium_banner_description": "",
+                                                "premium_banner_more_text": "Click Here",
+                                                "premium_banner_title_margin": {
+                                                    "unit": "px",
+                                                    "top": "50",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "premium_banner_desc_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "100",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "gradient_color_background": "gradient",
+                                                "gradient_color_color": "#11100E9E",
+                                                "gradient_color_color_b": "#00000080",
+                                                "__globals__": {
+                                                    "premium_banner_color_of_title": "globals\/colors?id=text",
+                                                    "premium_banner_title_typography_typography": "globals\/typography?id=48d72df"
+                                                },
+                                                "_animation": "fadeInUp",
+                                                "_animation_delay": 600
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "premium-addon-banner",
+                                            "elType": "widget"
+                                        },
+                                        {
+                                            "id": "5d37575",
+                                            "settings": {
+                                                "premium_banner_image": {
+                                                    "url": "https:\/\/templatekit.kotakkuning.com\/foturo\/wp-content\/uploads\/sites\/6\/2021\/11\/photo-shooting-at-the-studio-a-handsome-young-guy-resize.jpg",
+                                                    "id": 662
+                                                },
+                                                "thumbnail_size": "custom",
+                                                "thumbnail_custom_dimension": {
+                                                    "width": "600",
+                                                    "height": "550"
+                                                },
+                                                "premium_banner_image_animation": "animation11",
+                                                "premium_banner_title": "James Alex Production",
+                                                "premium_banner_description": "",
+                                                "premium_banner_more_text": "Click Here",
+                                                "premium_banner_title_margin": {
+                                                    "unit": "px",
+                                                    "top": "50",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "premium_banner_desc_margin": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "100",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": false
+                                                },
+                                                "gradient_color_background": "gradient",
+                                                "gradient_color_color": "#11100E9E",
+                                                "gradient_color_color_b": "#00000080",
+                                                "__globals__": {
+                                                    "premium_banner_color_of_title": "globals\/colors?id=text",
+                                                    "premium_banner_title_typography_typography": "globals\/typography?id=48d72df"
+                                                },
+                                                "_animation": "fadeInUp",
+                                                "_animation_delay": 800
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "premium-addon-banner",
+                                            "elType": "widget"
+                                        }
+                                    ],
+                                    "isInner": true,
+                                    "elType": "column"
+                                }
+                            ],
+                            "isInner": true,
+                            "elType": "section"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                }
+            ],
+            "isInner": false,
+            "elType": "section"
+        },
+        {
+            "id": "5d3f3615",
+            "settings": {
+                "padding": {
+                    "unit": "px",
+                    "top": "20",
+                    "right": "0",
+                    "bottom": "150",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "padding_tablet": {
+                    "unit": "px",
+                    "top": "50",
+                    "right": "50",
+                    "bottom": "100",
+                    "left": "50",
+                    "isLinked": false
+                },
+                "padding_mobile": {
+                    "unit": "px",
+                    "top": "20",
+                    "right": "20",
+                    "bottom": "100",
+                    "left": "20",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "51978bdb",
+                    "settings": {
+                        "_column_size": 100,
+                        "_inline_size": null,
+                        "background_background": "classic",
+                        "background_image": {
+                            "url": "https:\/\/templatekit.kotakkuning.com\/foturo\/wp-content\/uploads\/sites\/6\/2021\/08\/young-professional-videographer-holding-camera-on-resize.jpg",
+                            "id": 125
+                        },
+                        "background_position": "initial",
+                        "background_ypos": {
+                            "unit": "px",
+                            "size": -405,
+                            "sizes": []
+                        },
+                        "background_size": "cover",
+                        "background_overlay_background": "classic",
+                        "padding": {
+                            "unit": "px",
+                            "top": "50",
+                            "right": "80",
+                            "bottom": "50",
+                            "left": "80",
+                            "isLinked": false
+                        },
+                        "__globals__": {
+                            "background_overlay_color": "globals\/colors?id=primary"
+                        },
+                        "background_position_tablet": "top center",
+                        "background_position_mobile": "center center",
+                        "padding_tablet": {
+                            "unit": "px",
+                            "top": "50",
+                            "right": "50",
+                            "bottom": "50",
+                            "left": "50",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "px",
+                            "top": "100",
+                            "right": "20",
+                            "bottom": "100",
+                            "left": "20",
+                            "isLinked": false
+                        },
+                        "animation": "fadeInUp",
+                        "animation_delay": 100
+                    },
+                    "elements": [
+                        {
+                            "id": "14ab4037",
+                            "settings": {
+                                "structure": "20"
+                            },
+                            "elements": [
+                                {
+                                    "id": "42dc44a",
+                                    "settings": {
+                                        "_column_size": 50,
+                                        "_inline_size": 55
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "71e0570b",
+                                            "settings": {
+                                                "title": "Get Your Quote and Start Your Stories",
+                                                "__globals__": {
+                                                    "typography_typography": "globals\/typography?id=secondary",
+                                                    "title_color": "globals\/colors?id=text"
+                                                },
+                                                "align_mobile": "center",
+                                                "_animation": "fadeInUp",
+                                                "animation_duration": "slow",
+                                                "_animation_delay": 200
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "heading",
+                                            "elType": "widget"
+                                        }
+                                    ],
+                                    "isInner": true,
+                                    "elType": "column"
+                                },
+                                {
+                                    "id": "68a378c5",
+                                    "settings": {
+                                        "_column_size": 50,
+                                        "_inline_size": 44.953,
+                                        "content_position": "center"
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "7f096ab3",
+                                            "settings": {
+                                                "text": "Get Quotes Now",
+                                                "button_text_color": "#FFFFFF",
+                                                "background_color": "#79654B00",
+                                                "hover_animation": "float",
+                                                "border_border": "solid",
+                                                "border_width": {
+                                                    "unit": "px",
+                                                    "top": "2",
+                                                    "right": "2",
+                                                    "bottom": "2",
+                                                    "left": "2",
+                                                    "isLinked": true
+                                                },
+                                                "border_color": "#79654B",
+                                                "border_radius": {
+                                                    "unit": "px",
+                                                    "top": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "left": "0",
+                                                    "isLinked": true
+                                                },
+                                                "text_padding": {
+                                                    "unit": "px",
+                                                    "top": "40",
+                                                    "right": "80",
+                                                    "bottom": "40",
+                                                    "left": "80",
+                                                    "isLinked": false
+                                                },
+                                                "hover_color": "#FFFFFF",
+                                                "button_background_hover_color": "#02010100",
+                                                "button_hover_border_color": "#79654B",
+                                                "__globals__": {
+                                                    "typography_typography": "globals\/typography?id=accent"
+                                                },
+                                                "align": "right",
+                                                "icon_align": "right",
+                                                "icon_indent": {
+                                                    "unit": "px",
+                                                    "size": 0,
+                                                    "sizes": []
+                                                },
+                                                "align_mobile": "center",
+                                                "text_padding_tablet": {
+                                                    "unit": "px",
+                                                    "top": "40",
+                                                    "right": "60",
+                                                    "bottom": "40",
+                                                    "left": "60",
+                                                    "isLinked": false
+                                                },
+                                                "text_padding_mobile": {
+                                                    "unit": "px",
+                                                    "top": "40",
+                                                    "right": "25",
+                                                    "bottom": "40",
+                                                    "left": "25",
+                                                    "isLinked": false
+                                                },
+                                                "_animation": "fadeInUp",
+                                                "animation_duration": "slow",
+                                                "_animation_delay": 300
+                                            },
+                                            "elements": [],
+                                            "isInner": false,
+                                            "widgetType": "button",
+                                            "elType": "widget"
+                                        }
+                                    ],
+                                    "isInner": true,
+                                    "elType": "column"
+                                }
+                            ],
+                            "isInner": true,
+                            "elType": "section"
+                        }
+                    ],
+                    "isInner": false,
+                    "elType": "column"
+                }
+            ],
+            "isInner": false,
+            "elType": "section"
+        }
+    ]
+}

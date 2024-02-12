@@ -1,0 +1,104 @@
+/* Account Page - Done */
+.woocommerce-MyAccount-content {}
+
+nav.woocommerce-MyAccount-navigation {
+	margin-bottom: 30px;
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		border: 0;
+		@include flexbox;
+		@include flex-wrap(wrap);
+		@include align-items(center);
+
+		li {
+			position: relative;
+			z-index: 0;
+			margin: 0;
+
+			a {
+				display: block;
+				font-weight: 600;
+				background-color: transparent;
+				border-color: transparent;
+				padding: 8px 16px;
+				border-radius: var(--button-radius);
+			}
+
+			&.is-active {
+				a {
+					background-image: linear-gradient(to top left, var(--color-accent) -2500%, #0000 300%);
+				}
+			}
+		}
+	}
+}
+
+.woocommerce-address-fields__field-wrapper {
+	margin-bottom: $spacing_element;
+}
+
+.woocommerce-EditAccountForm {
+	fieldset {
+		margin-top: var(--h_space);
+	}
+}
+
+.woocommerce-form-login {
+	.woocommerce-form-login__submit {
+		float: $left;
+		margin-#{$right}: 1em;
+	}
+
+	.woocommerce-form-login__rememberme {
+		display: inline-block;
+	}
+}
+
+.woocommerce-account {
+
+	.addresses .title {
+		@include clearfix();
+
+		h3 {
+			float: $left;
+		}
+
+		.edit {
+			float: $right;
+			text-decoration: underline;
+		}
+	}
+
+	ol.commentlist.notes li.note {
+		p.meta {
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		.description p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	ul.digital-downloads {
+		margin-#{$left}: 0;
+		padding-#{$left}: 0;
+
+		li {
+			list-style: none;
+			margin-#{$left}: 0;
+			padding-#{$left}: 0;
+
+			&::before {
+				@include iconwoo("\ec58");
+			}
+
+			.count {
+				float: $right;
+			}
+		}
+	}
+}

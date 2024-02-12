@@ -1,0 +1,47 @@
+/* Cart Page - Done */
+.woocommerce-cart-form {
+	margin-bottom: var(--h_space);
+}
+
+.cart-collaterals,
+.col2-set {
+	@include flexbox;
+	@include flex-direction(column);
+	gap: $primary_space;
+
+	.sidebar-full & {
+		width: 100%;
+		@include screen('mobile-min') {
+			@include flex-direction(row);
+
+			> * {
+				width: 50%;
+			}
+		}
+	}
+}
+
+.wc-proceed-to-checkout {
+	margin-top: $spacing_element;
+
+	.button {
+		float: $right;
+	}
+}
+
+.woocommerce-shipping-destination {
+	margin: 15px 0 0;
+}
+
+.woocommerce-shipping-calculator {
+	.shipping-calculator-button {
+		margin-top: 15px;
+		text-decoration: underline;
+		display: block;
+		font-size: $font__size_small;
+	}
+
+	.shipping-calculator-form {
+		margin-top: 20px;
+	}
+}

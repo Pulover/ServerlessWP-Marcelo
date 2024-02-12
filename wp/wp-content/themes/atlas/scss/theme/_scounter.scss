@@ -1,0 +1,50 @@
+/* Social Counters */
+.social-counters {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    gap: 15px;
+
+    .counters-block & {
+        @include flex-direction(column);
+    }
+}
+
+a.social-counter {
+    @include flexbox;
+    @include align-items(center);
+    gap: 15px;
+    line-height: 1;
+    position: relative;
+    border: var(--btn-line-size) solid;
+    border-radius: var(--button-radius);
+    @include btn-white-skin-light;
+    padding: 5px 20px;
+    padding-#{$left}: 0;
+    margin-#{$left}: 10px;
+
+    .bg-dark & {
+        @include btn-white-skin-dark;
+    }
+
+    .counter-icon {
+        @include transition(all, 0.25s, linear);
+        margin: 0;
+        @include flex-shrink(0);
+        font-size: 18px;
+        padding: 15px;
+        @include btn-black-skin-light;
+        margin-#{$left}: -10px;
+        border-radius: 50%;
+
+        .bg-dark & {
+            @include btn-accent;
+        }
+    }
+
+    .counter-desc {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+    }
+}

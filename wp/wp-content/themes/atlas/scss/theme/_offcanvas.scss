@@ -1,0 +1,210 @@
+/*--------------------------------------------------------------
+# Offcanvas
+--------------------------------------------------------------*/
+.offcanvas {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    #{$left}: 0;
+    max-width: var(--offcanvas_width-width);
+    transform: translate3d(-100%, 0, 0);
+    transition: all 0.3s;
+    @include if-rtl {
+        transform: translate3d(100%, 0, 0);
+    }
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .admin-bar & {
+        top: 32px;
+    }
+}
+
+.offcanvas-inner {
+    padding: 15px 20px;
+    position: relative;
+    overflow-y: auto;
+    height: 100%;
+    min-height: 100%;
+    @include flexbox;
+    @include flex-direction(column);
+
+    > *:not(:last-child) {
+        margin-bottom: var(--h_space);
+    }
+
+    .menu-center & {
+        @include align-items(center);
+    }
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--light-sec-bg-color);
+
+        .bg-dark & {
+            background-color: var(--dark-sec-bg-color);
+        }
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--color-accent);
+        border: 4px solid var(--light-sec-bg-color);
+        border-radius: 8px;
+
+        .bg-dark & {
+            border: 4px solid var(--dark-sec-bg-color);
+        }
+    }
+}
+
+.offcanvas-head {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+    padding-top: 10px;
+}
+
+.offcanvas-close {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    font-size: 18px;
+    z-index: 9;
+}
+
+.offcanvas-overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 998;
+    background-color: var(--off-overlay-light);
+
+    .site-dark & {
+        background-color: var(--off-overlay-dark);
+    }
+
+    &.active {
+        visibility: visible;
+        opacity: 0.99;
+    }
+}
+/*--------------------------------------------------------------
+# Offcanvas Mobile Menu
+--------------------------------------------------------------*/
+.amp-mobilemenu {
+    width: 300px;
+    max-width: 100%;
+}
+
+ul.nav-mobile {
+    list-style: none;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+
+    .menu-center & {
+        text-align: center;
+    }
+
+    .menu-right & {
+        text-align: $right;
+    }
+
+    > li {}
+
+    li {
+        display: block;
+        position: relative;
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        a {
+            display: block;
+            position: relative;
+            padding-#{$right}: 30px;
+            text-decoration: none;
+
+            .menu-text {
+                position: relative;
+                line-height: 1;
+                display: inline-block;
+            }
+        }
+
+        &.current-menu-ancestor,
+        &.current-menu-item,
+        &:hover {
+            > a {
+                .menu-text {}
+            }
+        }
+    }
+
+    ul.sub-menu {
+        list-style: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 15px;
+        padding-#{$left}: 20px;
+
+        .is-active {}
+
+        .amp-mobilemenu & {
+            display: block;
+        }
+    }
+}
+
+.sub-pointer {
+    cursor: pointer;
+    @include user-select(none);
+    @include transition(all, 0.2s, linear);
+    margin-#{$left}: 15px;
+    position: absolute;
+    top: 50%;
+    #{$right}: 0;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    height: 30px;
+    width: 30px;
+    margin-top: -15px;
+
+    &::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        @include icon-svg-bg(16px, #{$arrow_menu_down});
+        background: currentColor;
+    }
+
+    &.is-active {
+        &::before {
+            transform: rotate(180deg);
+        }
+    }
+}

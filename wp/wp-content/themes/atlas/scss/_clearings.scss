@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+	font-size: var(--primary_text-font-size),
+}
+
+.clearfix {
+  @include clearfix();
+}
+.clear:after,
+.clear:before {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after {
+	clear: both;
+}

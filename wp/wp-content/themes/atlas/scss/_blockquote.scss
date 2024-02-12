@@ -1,0 +1,213 @@
+$quote_indent: 1.4em;
+
+blockquote {
+    quotes: "“" "”" "‘" "’";
+    position: relative;
+    font-size: 1.8em;
+    line-height: 1.5;
+    position: relative;
+    margin-bottom: $spacing_element;
+    margin-#{$left}: 0;
+    margin-#{$right}: 0;
+    padding: 0;
+    padding-#{$left}: $quote_indent;
+    color: var(--light-text-color-heavier-rgba);
+
+    .bg-dark & {
+        color: var(--dark-text-color-heavier-rgba);
+    }
+
+    &::before {
+        content: open-quote;
+        font-size: 2em;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        position: absolute;
+        #{$left}: 0;
+        top: 0.1em;
+    }
+
+    &::after {
+        content: no-close-quote !important;
+    }
+
+    > p {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .wp-block-pullquote__citation,
+    .wp-block-quote__citation,
+    cite,
+    footer {
+        font-size: 1rem !important;
+        font-style: normal;
+        font-weight: normal;
+        text-transform: none;
+        margin-top: 20px;
+        letter-spacing: normal;
+        font-family: var(--primary_text-font-family);
+        display: block;
+        position: relative;
+        padding-#{$left}: 30px;
+
+        &:before {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background-color: currentColor;
+            position: absolute;
+            #{$left}: 0;
+            top: 50%;
+        }
+    }
+
+    &.has-text-align-center,
+    .has-text-align-center & {
+        padding-#{$left}: $quote_indent;
+        padding-#{$right}: $quote_indent;
+
+        .wp-block-pullquote__citation,
+        .wp-block-quote__citation,
+        cite,
+        footer {
+            padding-#{$left}: 0;
+            padding-#{$right}: 0;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    &.has-text-align-right,
+    .has-text-align-right & {
+        padding-#{$left}: 0;
+        padding-#{$right}: $quote_indent;
+
+        &::before {
+            #{$left}: auto;
+            #{$right}: 0;
+        }
+
+        &.has-background {
+            padding-top: var(--box-padding);
+            padding-bottom: var(--box-padding);
+            padding-#{$left}: var(--box-padding);
+            padding-#{$right}: calc(var(--box-padding) + #{$quote_indent});
+
+            &::before {
+                #{$left}: auto;
+                #{$right}: var(--box-padding);
+            }
+        }
+
+        .wp-block-pullquote__citation,
+        .wp-block-quote__citation,
+        cite,
+        footer {
+            padding-#{$left}: 0;
+            padding-#{$right}: 30px;
+
+            &:before {
+                #{$left}: auto;
+                #{$right}: 0;
+            }
+        }
+    }
+}
+
+.wp-block-quote {
+    border-#{$left}: none;
+    border-#{$right}: none;
+
+    p {
+        font-size: inherit;
+        font-style: inherit;
+        line-height: inherit;
+    }
+
+    &.has-background {
+        padding-top: var(--box-padding);
+        padding-bottom: var(--box-padding);
+        padding-#{$left}: calc(var(--box-padding) + #{$quote_indent});
+        padding-#{$right}: var(--box-padding);
+
+        &::before {
+            top: calc(var(--box-padding) + 0.1em);
+            #{$left}: var(--box-padding);
+        }
+    }
+
+    &.is-style-plain {
+        padding: 0 30px;
+        border-#{$left}: 4px solid var(--color-accent);
+
+        &::before {
+            display: none;
+        }
+
+        &.has-background {
+            padding: var(--box-padding);
+        }
+
+        &.has-text-align-center {
+            border-#{$right}: 4px solid var(--color-accent);
+        }
+
+        &.has-text-align-right {
+            border-#{$left}: 0;
+            border-#{$right}: 4px solid var(--color-accent);
+        }
+    }
+}
+
+.wp-block-pullquote {
+    border-#{$left}: none;
+    border-#{$right}: none;
+    padding: 0;
+    border: none;
+    color: var(--light-text-color-heavier-rgba);
+
+    .bg-dark & {
+        color: var(--dark-text-color-heavier-rgba);
+    }
+
+    blockquote {
+        margin: 0;
+        color: inherit !important;
+    }
+
+    p {
+        font-size: inherit !important;
+        font-style: inherit;
+        line-height: inherit;
+    }
+
+    &.has-background {
+        color: inherit;
+        padding: var(--box-padding);
+    }
+
+    &.alignleft,
+    &.alignright,
+    .wp-block[data-align=left] > &,
+    .wp-block[data-align=right] > & {
+        p {
+            font-size: inherit;
+            font-style: inherit;
+            line-height: inherit;
+        }
+    }
+
+    &.has-text-align-left,
+    &.has-text-align-right {
+        max-width: 100%;
+    }
+
+    &.has-text-align-center {
+        text-align: center !important;
+    }
+}

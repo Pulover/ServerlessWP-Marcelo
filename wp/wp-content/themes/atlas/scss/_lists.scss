@@ -1,0 +1,37 @@
+/*--------------------------------------------------------------
+# Lists
+--------------------------------------------------------------*/
+ol,
+ul {
+
+	li {
+	    margin: 0 0 $spacing_element_small;
+
+	    &:last-child {
+	        margin-bottom: 0;
+	    }
+	}
+}
+
+li > ol:not(.wp-block-gallery),
+li > ul:not(.wp-block-gallery) {
+	margin-bottom: 0;
+	margin-top: $spacing_element_small;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin-#{$left}: 1.5em;
+}
+
+dd,
+dt {
+    margin: 0 0 $spacing_element_small;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

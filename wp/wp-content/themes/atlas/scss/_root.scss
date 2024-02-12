@@ -1,0 +1,98 @@
+:root {
+	--site_width: 1070;
+	--content_width: 69;
+	--box_radius: 10;
+	--button_radius: 10;
+	--image_radius: 10;
+	--light-bg-color: #f7f9f8;
+	--light-sec-bg-color: #ffffff;
+	--light-text-color-color: #202124;
+	--light-text-color-alpha: 1;
+	--light-text-color-rgba: rgba(32,33,36,1);
+	--light-text-color-heavier-color: #000000;
+	--light-text-color-heavier-alpha: 1;
+	--light-text-color-heavier-rgba: rgba(0,0,0,1);
+	--light-text-color-lighter-color: #999999;
+	--light-text-color-lighter-alpha: 1;
+	--light-text-color-lighter-rgba: rgba(153,153,153,1);
+	--light-line-color-color: #efefef;
+	--light-line-color-alpha: 1;
+	--light-line-color-rgba: rgba(239,239,239,1);
+	--light-submenu-bg-color: #f5f5f5;
+	--light-submenu-bg-alpha: 1;
+	--light-submenu-bg-rgba: rgba(245,245,245,1);
+	--dark-bg-color: #1c1c1c;
+	--dark-sec-bg-color: #161617;
+	--dark-text-color-color: #ffffff;
+	--dark-text-color-alpha: 0.8;
+	--dark-text-color-rgba: rgba(255,255,255,0.8);
+	--dark-text-color-heavier-color: #ffffff;
+	--dark-text-color-heavier-alpha: 1;
+	--dark-text-color-heavier-rgba: rgba(255,255,255,1);
+	--dark-text-color-lighter-color: #ffffff;
+	--dark-text-color-lighter-alpha: 0.6;
+	--dark-text-color-lighter-rgba: rgba(255,255,255,0.6);
+	--dark-line-color-color: #ffffff;
+	--dark-line-color-alpha: 0.1;
+	--dark-line-color-rgba: rgba(255,255,255,0.1);
+	--dark-submenu-bg-color: #000000;
+	--dark-submenu-bg-alpha: 1;
+	--dark-submenu-bg-rgba: rgba(0,0,0,1);
+	--color-accent: #3d55ef;
+	--color-accent-text: #ffffff;
+	--primary_text-font-family: Poppins;
+	--primary_text-font-weight: 400;
+	--primary_text-font-size: 14px;
+	--primary_text-line-height: 1.7;
+	--primary_text-letter-spacing: 0;
+	--second_text-font-family: Poppins;
+	--second_text-font-weight: 400;
+	--second_text-font-size: 12px;
+	--second_text-line-height: 1.5;
+	--second_text-letter-spacing: 0;
+	--font_heading-font-family: Poppins;
+	--font_heading-font-weight: 700;
+	--h1_desktop-font-size: 28px;
+	--h2_desktop-font-size: 24px;
+	--h3_desktop-font-size: 21px;
+	--h4_desktop-font-size: 18px;
+	--h5_desktop-font-size: 16px;
+	--h6_desktop-font-size: 14px;
+	--h1_tablet-font-size: 28px;
+	--h2_tablet-font-size: 24px;
+	--h3_tablet-font-size: 21px;
+	--h4_tablet-font-size: 18px;
+	--h5_tablet-font-size: 16px;
+	--h6_tablet-font-size: 14px;
+	--h1_mobile-font-size: 28px;
+	--h2_mobile-font-size: 24px;
+	--h3_mobile-font-size: 21px;
+	--h4_mobile-font-size: 18px;
+	--h5_mobile-font-size: 18px;
+	--h6_mobile-font-size: 14px;
+	--logo_svg_width-width: 74px;
+	--logo_svg_width-units: px;
+	--logo_mobile_svg_width-width: 74px;
+	--logo_mobile_svg_width-units: px;
+	--logo_offcanvas_svg_width-width: 74px;
+	--logo_offcanvas_svg_width-units: px;
+	--header_space: 25;
+	--mheader_space: 25;
+	--footer_bg_custom:;
+	--reading_indicator_height: 3;
+	--offcanvas_width-width: 300px;
+	--offcanvas_width-units: px;
+	--off_overlay_light-color: #f5f8fa;
+	--off_overlay_light-alpha: 1;
+	--off_overlay_dark-color: #161617;
+	--off_overlay_dark-alpha: 1;
+
+	@each $variable, $value in $root {
+		#{$variable}: $value;
+	}
+	@include screen('mobile-landscape-max') {
+		@each $variable, $value in $root_mobile {
+			#{$variable}: $value;
+		}
+	}
+}

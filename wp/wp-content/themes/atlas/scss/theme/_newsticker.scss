@@ -1,0 +1,60 @@
+/* Newsticker */
+.th90-blockticker {
+    @include flexbox;
+    overflow: hidden;
+}
+
+.block-tickerwrap {
+    @include flexbox;
+    @include align-items(center);
+    gap: 10px;
+    @include flex-shrink(0);
+    border-radius: var(--box-radius);
+
+    .post-item {
+        margin: 0;
+    }
+}
+
+.block-newsticker {
+    .itemWrap {
+        &:not(:first-child) {
+            display: none;
+        }
+    }
+}
+
+.ticker-thumb {
+    width: 20px;
+}
+
+.post-ticker,
+.ticker-head {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-shrink(0);
+    gap: 5px;
+
+    > * {
+        @include flex-shrink(0);
+    }
+}
+
+.ticker-head {
+    h4 {
+        font-size: $font__size_medium;
+    }
+    .icon-svg {
+        color: var(--light-text-color-heavier-rgba);
+
+        .bg-dark & {
+            color: var(--dark-text-color-heavier-rgba);
+        }
+    }
+}
+
+.post-ticker {
+    .entry-title {
+        font-size: $font__size_medium;
+    }
+}

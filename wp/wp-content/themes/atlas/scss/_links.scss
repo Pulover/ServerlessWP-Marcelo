@@ -1,0 +1,42 @@
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+.is-link,
+.wp-block-freeform.block-library-rich-text__tinymce a,
+a {
+	color: var(--light-text-color-heavier-rgba);
+	@include transition(all, 0.25s, linear);
+	cursor: pointer;
+	text-decoration: none;
+
+	.bg-dark & {
+		color: var(--dark-text-color-heavier-rgba);
+	}
+
+	&.active,
+	&:active,
+	&:hover {
+		outline: 0;
+		color: var(--color-accent);
+	}
+}
+
+a {
+	&.title-text {
+		width: calc(100%);
+		background-image: linear-gradient(transparent calc(100% - 1px), currentColor 1px);
+		background-repeat: no-repeat;
+		background-size: 0 100%;
+		transition: background-size 0.3s;
+
+		&:hover {
+			color: currentColor;
+			background-size: 100% 100%;
+		}
+	}
+}
+
+.wp-block-button__link {
+	font-size: 1em;
+	text-decoration: none !important;
+}

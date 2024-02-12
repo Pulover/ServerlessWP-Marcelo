@@ -1,0 +1,190 @@
+/*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	@include button;
+	@include btn-accent;
+
+	&[disabled] {
+		cursor: not-allowed;
+		@include btn-white-skin-light;
+	}
+}
+
+.s-front .button {
+	&.btn-default {
+		@include btn-accent;
+	}
+
+	.icon-svg {
+		font-size: $btn_icon_medium;
+	}
+	// Button Sizes
+	&.btn-tiny {
+		font-size: 11px;
+		height: $form_tiny_height;
+		line-height: calc(#{$form_tiny_height} - (var(--btn-line-size) * 2));
+
+		.icon-svg {
+			font-size: $btn_icon_tiny;
+		}
+	}
+
+	&.btn-small {
+		font-size: 12px;
+		height: $form_small_height;
+		line-height: calc(#{$form_small_height} - (var(--btn-line-size) * 2));
+
+		.icon-svg {
+			font-size: $btn_icon_small;
+		}
+	}
+
+	&.btn-large {
+		height: $form_large_height;
+		line-height: calc(#{$form_large_height} - (var(--btn-line-size) * 2));
+
+		.icon-svg {
+			font-size: $btn_icon_large;
+		}
+	}
+	// Button Style
+	&.btn-accent {
+		@include btn-accent;
+	}
+
+	&.btn-white {
+		@include btn-white-skin-light;
+	}
+
+	&.btn-black {
+		@include btn-black-skin-light;
+	}
+
+	&.btn-text {
+		@include button-text;
+		color: var(--light-text-color-heavier-rgba);
+
+		&:hover {
+			color: var(--color-accent);
+		}
+	}
+
+	&.btn-text_color {
+		@include button-text;
+		color: var(--color-accent);
+
+		&:hover {
+			color: var(--color-accent);
+		}
+	}
+	// Icon Button
+	&.btn-content_icon {
+		padding: 0;
+		margin-bottom: 0;
+		overflow: visible;
+		width: $form_height;
+
+		&.btn-tiny {
+			width: $form_tiny_height;
+		}
+
+		&.btn-small {
+			width: $form_small_height;
+		}
+
+		&.btn-large {
+			width: $form_large_height;
+		}
+
+		&.btn-text,
+		&.btn-text_color {
+			height: auto;
+			width: auto;
+		}
+	}
+
+	&.icon-right {
+		@include flex-direction(row-reverse);
+	}
+
+	&.btn-disabled {
+		cursor: not-allowed;
+
+		&:not(.btn-text):not(.btn-text_color) {
+			@include btn-white-skin-light;
+		}
+	}
+}
+
+.s-front .bg-dark .button,
+.s-front.site-dark .button {
+	&.btn-black {
+		@include btn-black-skin-dark;
+	}
+
+	&.btn-white {
+		@include btn-white-skin-dark;
+	}
+
+	&.btn-text {
+		color: var(--dark-text-color-heavier-rgba);
+
+		&:hover {
+			color: var(--color-accent);
+		}
+	}
+}
+
+.s-front.site-dark .bg-light .button {
+	&.btn-black {
+		@include btn-black-skin-light;
+	}
+
+	&.btn-white {
+		@include btn-white-skin-light;
+	}
+
+	&.btn-text {
+		color: var(--light-text-color-heavier-rgba);
+
+		&:hover {
+			color: var(--color-accent);
+		}
+	}
+}
+
+.btn-disabled {
+	cursor: not-allowed;
+
+	&:not(.btn-text):not(.btn-text_color) {
+		@include btn-white-skin-light;
+	}
+}
+
+a.wp-block-button__link {
+	.article-content & {
+		text-decoration: inherit;
+		font-weight: inherit;
+		font-size: inherit;
+	}
+}
+
+.btn-cart {
+	margin-bottom: 0;
+	display: block;
+}
+
+.skin-trigger {
+	margin-bottom: 0;
+}
+/*--------------------------------------------------------------
+# Trigger Button
+--------------------------------------------------------------*/
+.trigger-wrap {
+	@include flexbox;
+}

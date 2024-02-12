@@ -1,0 +1,276 @@
+.woocommerce {
+	form {
+		.form-row {
+			padding: 0;
+			@include clearfix();
+
+			.form-row {
+				margin-bottom: 20px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			[placeholder]:focus::-webkit-input-placeholder {
+				transition: opacity 0.5s 0.5s ease;
+				opacity: 0;
+			}
+
+			label.hidden {
+				visibility: hidden;
+			}
+
+			label.inline {
+				display: inline;
+			}
+
+			span {
+				em {
+					font-size: $font__size_small;
+				}
+			}
+
+			.woocommerce-input-wrapper {
+				.description {
+					background: #1e85be;
+					color: #fff;
+					border-radius: 3px;
+					padding: 1em;
+					margin: 0.5em 0 0;
+					clear: both;
+					display: none;
+					position: relative;
+
+					a {
+						color: #fff;
+						text-decoration: underline;
+						border: 0;
+						box-shadow: none;
+					}
+
+					&::before {
+						#{$left}: 50%;
+						top: 0;
+						margin-top: -4px;
+						transform: translateX(-50%) rotate(180deg);
+						content: "";
+						position: absolute;
+						border-width: 4px 6px 0 6px;
+						border-style: solid;
+						border-color: #1e85be transparent transparent transparent;
+						z-index: 100;
+						display: block;
+					}
+				}
+			}
+
+			select {
+				cursor: pointer;
+				margin: 0;
+			}
+
+			.required {
+				color: red;
+				font-weight: 700;
+				border: 0 !important;
+				text-decoration: none;
+				visibility: hidden; // Only show optional by default.
+			}
+
+			.optional {
+				visibility: visible;
+			}
+
+			.input-checkbox {
+				display: inline;
+				margin: side-values(-2px 8px 0 0);
+				text-align: center;
+				vertical-align: middle;
+			}
+
+			input.input-text,
+			textarea {
+				box-sizing: border-box;
+				width: 100%;
+				margin: 0;
+				outline: 0;
+				line-height: normal;
+			}
+
+			textarea {
+				height: 4em;
+				line-height: 1.5;
+				display: block;
+				box-shadow: none;
+			}
+
+			.select2-container {
+				width: 100%;
+				line-height: $form_height;
+
+				&.select2-container--default {
+					.select2-selection--single {
+						position: relative;
+
+						.select2-selection__rendered {
+							line-height: $form_height;
+							color: inherit;
+							padding: 0 15px;
+							position: absolute;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+						}
+
+						.select2-selection__arrow {
+							height: $form_height;
+							width: 32px;
+							font-size: 18px;
+							text-align: center;
+
+							&:after {
+								@include iconwoo("\ea4e");
+							}
+
+							b {
+								display: none;
+							}
+						}
+					}
+				}
+
+				&.select2-container--open {
+					.select2-selection--single {
+						.select2-selection__arrow {
+							&:after {
+								@include iconwoo("\ea78");
+							}
+						}
+					}
+				}
+			}
+
+			&.woocommerce-invalid {
+				label {
+					color: $red;
+				}
+
+				.select2-container,
+				input.input-text,
+				select {
+					border-color: $red;
+				}
+			}
+
+			&.woocommerce-validated {
+				.select2-container,
+				input.input-text,
+				select {
+					border-color: darken($green, 5%);
+				}
+			}
+
+			::-webkit-input-placeholder {
+				line-height: normal;
+			}
+
+			:-moz-placeholder {
+				line-height: normal;
+			}
+
+			:-ms-input-placeholder {
+				line-height: normal;
+			}
+		}
+
+		&.checkout_coupon,
+		&.login,
+		&.register {
+			margin: 30px 0;
+			text-align: $left;
+		}
+
+		.form-row-first,
+		.form-row-last {
+			width: 49%;
+			overflow: visible;
+		}
+
+		.form-row-first {
+			float: $left;
+		}
+
+		.form-row-last {
+			float: $right;
+		}
+
+		.form-row-wide {
+			clear: both;
+		}
+
+		.password-input {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			position: relative;
+
+			input[type="password"] {
+				padding-#{$right}: 2.5rem;
+			}
+			/* Hide the Edge "reveal password" native button */
+			input::-ms-reveal {
+				display: none;
+			}
+		}
+
+		.show-password-input {
+			position: absolute;
+			right: 0.7em;
+			top: 0.7em;
+			cursor: pointer;
+		}
+
+		.show-password-input::after {
+			@include iconwoo("\ecb3");
+		}
+
+		.show-password-input.display-password::after {
+			color: #585858;
+		}
+	}
+
+	ul#shipping_method {
+		list-style: none outside;
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin: 0 0 0.5em;
+			line-height: 1.5em;
+			list-style: none outside;
+
+			input {
+				margin: side-values(3px 0.4375em 0 0);
+				vertical-align: top;
+			}
+
+			label {
+				display: inline;
+			}
+		}
+
+		.amount {
+			font-weight: 700;
+		}
+	}
+
+	p.woocommerce-shipping-contents {
+		margin: 0;
+	}
+
+	.shipping_address {
+		//margin-bottom: $spacing_form_field;
+	}
+}

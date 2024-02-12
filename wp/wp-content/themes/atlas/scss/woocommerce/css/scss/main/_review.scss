@@ -1,0 +1,171 @@
+/* Reviews */
+#reviews {
+	.comment {
+		@include clearfix();
+
+		img {
+			float: $right;
+			height: auto;
+		}
+	}
+
+	.woocommerce-verification-required {
+		margin: 0;
+	}
+
+	#review_form_wrapper {
+		margin-top: 20px;
+	}
+
+	#respond {
+		margin: 0;
+		border: 0;
+		padding: 0;
+
+		.comment-reply-title {
+			@include heading-text;
+			font-size: 1.5em;
+			display: block;
+			margin-bottom: 30px;
+			color: var(--light-text-color-heavier-rgba);
+
+			.bg-dark & {
+				color: var(--dark-text-color-heavier-rgba);
+			}
+		}
+
+		.comment-form-rating {
+			@include flexbox;
+			@include align-items(center);
+			margin-bottom: 15px;
+
+			> * {
+				margin-bottom: 0 !important;
+				margin-#{$right}: 10px;
+
+				&.stars,
+				&:last-child {
+					margin-#{$right}: 0;
+				}
+			}
+		}
+
+		.comment-form-author,
+		.comment-form-email {
+			@include screen('small-mobile-min') {
+				width: 50%;
+			}
+		}
+
+		.comment-form-email {
+			padding-#{$right}: 0;
+		}
+
+		label {
+			display: inline-block;
+		}
+	}
+
+	#comments {
+		.add_review {
+			@include clearfix();
+		}
+
+		h2 {
+			clear: none;
+		}
+
+		.woocommerce-noreviews {
+			margin-bottom: $spacing_element;
+		}
+
+		ol.commentlist {
+			@include clearfix();
+			margin: 0;
+			width: 100%;
+			background: none;
+			list-style: none;
+			padding: 0;
+
+			li {
+				padding: 0;
+				margin: 0 0 40px;
+				border: 0;
+				position: relative;
+				background: 0;
+				border: 0;
+
+				.meta {
+					@include flexbox;
+					@include align-items(center);
+					line-height: 1;
+					color: var(--light-text-color-lighter-rgba);
+
+					.bg-dark & {
+						color: var(--dark-text-color-lighter-rgba);
+					}
+
+					.woocommerce-review__author {
+						color: var(--light-text-color-heavier-rgba);
+
+						.bg-dark & {
+							color: var(--dark-text-color-heavier-rgba);
+						}
+					}
+
+					.woocommerce-review__published-date {
+						@include second-text;
+					}
+
+					.woocommerce-review__dash {
+						margin: 0 5px;
+					}
+				}
+
+				img.avatar {
+					float: $left;
+					width: 60px;
+					height: auto;
+					margin: 0;
+					box-shadow: none;
+					border-radius: 50%;
+				}
+
+				.comment-text {
+					margin: side-values(0 0 0 80px);
+					border: 0;
+					border-radius: 0;
+					padding: 0;
+					@include clearfix();
+
+					p {
+						margin: 0;
+					}
+
+					p.meta {
+						float: $left;
+					}
+
+					.star-rating {
+						float: $right;
+						margin-#{$left}: 15px;
+					}
+
+					.description {
+						margin-top: 15px;
+						float: $left;
+					}
+				}
+			}
+
+			ul.children {
+				list-style: none outside;
+				margin: side-values(20px 0 0 50px);
+
+				.star-rating {
+					display: none;
+				}
+			}
+		}
+	}
+}

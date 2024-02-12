@@ -1,0 +1,62 @@
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft,
+.wp-block-gallery.alignleft,
+.wp-block-image .alignleft,
+.wp-block[data-align=left] > * {
+	float: $left;
+	margin-#{$right}: 30px;
+	margin-top: 0.5em;
+	//margin-bottom: 1em;
+	margin-#{$left}: 0;
+	max-width: 50%;
+	text-align: $left;
+}
+
+.alignright,
+.wp-block-gallery.alignright,
+.wp-block-image .alignright,
+.wp-block[data-align=right] > * {
+	float: $right;
+	margin-#{$left}: 30px;
+	margin-top: 0.5em;
+	//margin-bottom: 1em;
+	margin-#{$right}: 0;
+	max-width: 50%;
+	text-align: $right;
+}
+
+.aligncenter,
+.wp-block-gallery.aligncenter > *,
+.wp-block[data-align=center] {
+	clear: both;
+	margin-#{$left}: auto;
+	margin-#{$right}: auto;
+	text-align: center;
+}
+
+.alignleft,
+.alignright,
+.wp-block[data-align=left] > *,
+.wp-block[data-align=right] > * {
+	&.wp-block-cover,
+	&.wp-block-cover-image,
+	&.wp-block-pullquote {
+		width: 50%;
+		max-width: 50%;
+		@include screen('small-mobile-max') {
+			width: 100%;
+			max-width: 100%;
+			margin-bottom: $spacing_element;
+		}
+	}
+}
+
+.has-text-align-left {
+	text-align: $left;
+}
+
+.has-text-align-right {
+	text-align: $right;
+}

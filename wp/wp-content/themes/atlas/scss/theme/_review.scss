@@ -1,0 +1,96 @@
+/*--------------------------------------------------------------
+# Review
+--------------------------------------------------------------*/
+.box-review {
+    @include flexbox;
+    @include flex-direction(column);
+    background-image: linear-gradient(to top left, var(--color-accent) -2500%,#0000 300%);
+    margin-top: var(--h_space);
+    border-radius: var(--box-radius);
+    padding: 25px;
+}
+
+.box-review-head {
+    @include flexbox;
+    @include align-items(flex-end);
+    gap: 15px;
+    margin-bottom: 25px;
+
+    .head-total {
+        font-size: 3.6rem;
+        line-height: 0.85;
+    }
+
+    .head-text {
+        font-size: $font__size_medium;
+    }
+}
+
+.box-review-desc {
+    @include flexbox;
+    @include flex-grow(1);
+    gap: 12px;
+    @include flex-direction(column);
+}
+
+.item-review {
+    @include flexbox;
+    @include align-items(center);
+    gap: 15px;
+}
+
+.item-progress {
+    height: 5px;
+    @include flex-grow(1);
+    position: relative;
+    background-color: var(--light-line-color-rgba);
+    border-radius: var(--box-radius);
+
+    .bg-dark & {
+        background-color: var(--dark-line-color-rgba);
+    }
+}
+
+.progress-val {
+    position: absolute;
+    height: 100%;
+    border-radius: var(--box-radius);
+    background-color: var(--color-accent);
+}
+
+.c-val {
+    font-size: $font__size_medium;
+}
+
+.p-review {
+    padding: 2px 4px;
+    border-radius: var(--box-radius);
+    background-color: var(--color-accent);
+    color: var(--color-accent-text);
+    font-weight: 500;
+    font-size: $font__size_small;
+
+    + .cat-text {
+        margin-#{$left}: 4px;
+    }
+
+    .entry-thumbnail & {
+        position: absolute;
+        top: 0;
+        #{$left}: 0;
+        padding: 1px 4px;
+        font-size: $font__size_tiny;
+    }
+
+    &.mid {
+        background-image: linear-gradient(to bottom, #eab919 0%,#db870a 100%);
+    }
+
+    &.good {
+        background-image: linear-gradient(to bottom, #4fa73c 0%,#31d979 100%);
+    }
+
+    &.bad {
+        background-image: linear-gradient(to bottom, #ef5858 0%,#bd2525 100%);
+    }
+}

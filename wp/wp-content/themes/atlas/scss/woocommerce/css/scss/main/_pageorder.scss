@@ -1,0 +1,77 @@
+/* Order page - Done */
+ul.order_details {
+	@include clearfix();
+	margin: 0;
+	padding-#{$left}: 0 !important;
+	list-style: none;
+
+	li {
+		text-transform: uppercase;
+		font-size: $font__size_small;
+		line-height: 1;
+		border-bottom: 1px dashed var(--light-line-color-rgba);
+		list-style-type: none;
+		display: block;
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+
+		.bg-dark & {
+			border-bottom-color: var(--dark-line-color-rgba);
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		strong {
+			margin-#{$right}: 10px;
+			text-transform: none;
+			line-height: 2;
+		}
+
+		&:last-of-type {
+			border: none;
+		}
+	}
+}
+
+.wc-bacs-bank-details-account-name {
+	font-weight: bold;
+}
+
+.woocommerce-order-details,
+ul.order_details {
+	margin-bottom: var(--h_space) !important;
+}
+
+.woocommerce-customer-details,
+.woocommerce-order-downloads {
+	.woocommerce-column {
+		margin-bottom: var(--h_space);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.woocommerce-customer-details--email,
+	.woocommerce-customer-details--phone {
+		margin-bottom: 0;
+		padding-#{$left}: 1.5em;
+	}
+
+	.woocommerce-customer-details--phone::before {
+		@include iconwoo("\efec");
+		margin-#{$left}: -1.5em;
+		line-height: 1.75;
+		position: absolute;
+	}
+
+	.woocommerce-customer-details--email::before {
+		@include iconwoo("\eef6");
+		margin-#{$left}: -1.5em;
+		line-height: 1.75;
+		position: absolute;
+	}
+}

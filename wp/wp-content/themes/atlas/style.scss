@@ -1,0 +1,56 @@
+/*
+Theme Name: Atlas
+Theme URI: https://tmrwstudio.live/atlas
+Author: tmrwstudio
+Author URI: https://themeforest.net/user/tmrwstudio
+Description: Atlas is a responsive Wordpress news, blog, magazine template. The user can use by especially magazine, blog & newspaper for online.
+Version: 1.5.3
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: atlas
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+@import "scss/variables";
+@import "scss/mixins/mixins";
+@import "scss/normalize";
+@import "scss/formatting";
+@import "scss/root";
+@import "scss/clearings";
+@import "scss/spacing";
+@import "scss/alignments";
+@import "scss/typography";
+@import "scss/blockquote";
+@import "scss/forms";
+@import "scss/separator";
+@import "scss/lists";
+@import "scss/tables";
+@import "scss/links";
+@import "scss/button";
+@import "scss/media";
+@import "scss/captions";
+@import "scss/layout";
+@import "scss/theme/venobox";
+@import "scss/theme/box";
+@import "scss/theme/heading";
+@import "scss/theme/header";
+@import "scss/theme/menu";
+@import "scss/theme/search";
+@import "scss/theme/socials";
+@import "scss/theme/widgets";
+@import "scss/theme/gutenberg";
+@import "scss/theme/article";
+@import "scss/theme/comments";
+@import "scss/theme/pagination";
+@import "scss/theme/post";
+@import "scss/theme/module";
+@import "scss/theme/slider";
+@import "scss/theme/offcanvas";
+@import "scss/theme/newsletter";
+@import "scss/theme/newsticker";
+@import "scss/theme/utilities";
+@import "scss/theme/breadcrumb";
+@import "scss/theme/review";
+@import "scss/theme/ads";

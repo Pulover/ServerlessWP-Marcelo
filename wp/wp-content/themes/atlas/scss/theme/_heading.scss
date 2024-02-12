@@ -1,0 +1,177 @@
+.widget-heading {
+    margin-bottom: 20px;
+    @include flexbox;
+    position: relative;
+    @include justify-content(space-between);
+    @include align-items(center);
+    overflow: hidden;
+    gap: 10px;
+
+    .wheading-brd & {
+        &:not(.comment-reply-title) {
+            padding-top: 15px;
+            border-top: 1px solid var(--light-text-color-heavier-rgba);
+        }
+    }
+
+    .bg-dark & {
+        .wheading-brd & {
+            &:not(.comment-reply-title) {
+                border-top: 1px solid var(--color-accent);
+            }
+        }
+    }
+
+    .box-wrap:not(.box-disable) & {
+        .wheading-brd & {
+            &:not(.comment-reply-title) {
+                margin-top: calc((var(--box-padding) + 1px) * -1);
+                margin-left: calc((var(--box-padding) + 1px) * -1);
+                margin-right: calc((var(--box-padding) + 1px) * -1);
+                padding-left: var(--box-padding);
+                padding-right: var(--box-padding);
+                border-radius: var(--box-radius);
+            }
+        }
+    }
+
+    .center-wheading & {
+        @include justify-content(center);
+    }
+
+    .heading-elm {
+        @include flexbox;
+        @include align-items(center);
+        @include flex-shrink(0);
+        gap: 15px;
+    }
+
+    .title {
+        @include flex-shrink(0);
+        margin-bottom: 0 !important;
+
+        .wheading-bg & {
+            @include accent-background;
+            font-size: 1.5em;
+            padding: 5px 10px;
+            border-radius: var(--box-radius);
+        }
+    }
+
+    .viewAll {
+        margin-inline-start: auto;
+        font-size: 10px;
+        color: var(--light-text-color-lighter-rgba);
+
+        .bg-dark & {
+            color: var(--light-text-color-lighter-rgba);
+        }
+
+        .wheading-bg & {
+            color: var(--color-accent);
+            text-decoration: underline;
+        }
+    }
+
+    &.simple-heading {
+        padding: 0;
+
+        &::before {
+            display: none;
+        }
+
+        .title {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.element-article.box-section.box-wrap {
+    .wheading-brd & {
+        padding-top: var(--box-padding);
+        border-top: 1px solid var(--light-text-color-heavier-rgba);
+
+        &:not(.box-disable) & {
+            margin-top: calc((var(--box-padding) + 1px) * -1);
+            margin-left: calc((var(--box-padding) + 1px) * -1);
+            margin-right: calc((var(--box-padding) + 1px) * -1);
+            padding-left: var(--box-padding);
+            padding-right: var(--box-padding);
+            border-radius: var(--box-radius);
+        }
+    }
+
+    .bg-dark & {
+        .wheading-brd & {
+            border-top: 1px solid var(--color-accent);
+        }
+    }
+}
+
+.module-sorts {
+    @include flexbox;
+    @include align-items(center);
+    gap: 5px;
+
+    a {
+        font-size: $font__size_medium;
+        padding: 2px 8px;
+        border-radius: var(--button-radius);
+        background-image: linear-gradient(to top left, var(--color-accent) -2500%,#0000 300%);
+
+        &.active {
+            background-color: var(--color-accent);
+            color: var(--color-accent-text);
+        }
+    }
+}
+
+.page-title-wrap {
+    @include flexbox;
+    @include flex-direction(column);
+    margin-bottom: 20px;
+    gap: 15px;
+
+    .widget-heading,
+    h1 {
+        margin-bottom: 0;
+    }
+
+    .page-desc {
+        margin-bottom: 15px;
+    }
+}
+/* Page Title Author */
+.desc-author {
+    .vcard {
+        @include flexbox;
+        gap: 15px;
+    }
+
+    .author-ava {
+        width: 72px;
+        height: 72px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+        font-size: $font__size_medium;
+        gap: 12px;
+    }
+}
+
+/* About Us Head */
+.about-us {
+    .wheading-brd & {
+        padding-top: 15px;
+        border-top: 1px solid var(--light-text-color-heavier-rgba);
+    }
+
+    .bg-dark & {
+        .wheading-brd & {
+            border-top: 1px solid var(--color-accent);
+        }
+    }
+}

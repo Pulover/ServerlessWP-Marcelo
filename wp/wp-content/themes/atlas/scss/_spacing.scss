@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+# Spacing
+--------------------------------------------------------------*/
+.button {
+    margin: 0 0 $spacing_element_small;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.wp-block-archives,
+.wp-block-archives-list,
+.wp-block-archives-dropdown,
+.wp-block-calendar,
+.wp-block-categories,
+.wp-block-latest-comments,
+.wp-block-latest-posts,
+.wp-block-search,
+.wp-block-tag-cloud,
+.wp-block-rss,
+.gallery,
+.wp-block-audio,
+.wp-block-button,
+.wp-block-columns,
+.wp-block-cover,
+.wp-block-embed,
+.wp-block-gallery,
+.wp-block-gallery:not(.has-nested-images),
+.wp-block-group,
+.wp-block-image,
+.wp-block-media-text,
+.wp-block-video,
+.wp-block-pullquote,
+.wp-block-table,
+.wp-caption,
+address,
+blockquote,
+dl,
+fieldset,
+figure,
+form,
+ol,
+p,
+pre,
+button,
+input,
+select,
+textarea,
+form p,
+ul:not(.blocks-gallery-grid),
+table {
+    margin-top: 0;
+    margin-bottom: $spacing_element;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 25px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

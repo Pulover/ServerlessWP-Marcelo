@@ -1,0 +1,201 @@
+/* Checkout page - Done */
+#payment {
+
+	.place-order {
+		padding: 0;
+	}
+
+	ul.payment_methods {
+		@include clearfix();
+		text-align: $left;
+		border-bottom: var(--line-size) solid var(--light-line-color-rgba);
+		margin: 0;
+		list-style: none outside;
+		padding-#{$left}: 0;
+		padding-top: 30px;
+		padding-bottom: 30px;
+
+		.bg-dark & {
+			border-bottom-color: var(--dark-line-color-rgba);
+		}
+
+		li {
+			text-align: $left;
+			margin: 0;
+			font-weight: normal;
+
+			label {
+				display: unset;
+			}
+
+			img {
+				vertical-align: middle;
+				margin: side-values(-2px 0 0 0.5em);
+				padding: 0;
+				position: relative;
+				box-shadow: none;
+			}
+
+			img + img {
+				margin-#{$left}: 2px;
+			}
+		}
+
+		li:not(.woocommerce-notice) {
+			@include clearfix;
+		}
+	}
+
+	div.payment_box {
+		position: relative;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 20px;
+		margin: 1em 0;
+		border-radius: 6px;
+		background-color: var(--color-accent);
+
+		input.input-text,
+		textarea {
+			border-color: darken($secondary, 15%);
+			border-top-color: darken($secondary, 20%);
+		}
+
+		::-webkit-input-placeholder {
+			color: darken($secondary, 20%);
+		}
+
+		:-moz-placeholder {
+			color: darken($secondary, 20%);
+		}
+
+		:-ms-input-placeholder {
+			color: darken($secondary, 20%);
+		}
+
+		.woocommerce-SavedPaymentMethods {
+			list-style: none outside;
+			margin: 0;
+
+			.woocommerce-SavedPaymentMethods-new,
+			.woocommerce-SavedPaymentMethods-token {
+				margin: 0 0 0.5em;
+
+				label {
+					cursor: pointer;
+				}
+			}
+
+			.woocommerce-SavedPaymentMethods-tokenInput {
+				vertical-align: middle;
+				margin: side-values(-3px 1em 0 0);
+				position: relative;
+			}
+		}
+
+		.wc-credit-card-form {
+			border: 0;
+			padding: 0;
+			margin: 1em 0 0;
+		}
+
+		.wc-credit-card-form-card-cvc,
+		.wc-credit-card-form-card-expiry,
+		.wc-credit-card-form-card-number {
+			font-size: 1.5em;
+			padding: 8px;
+			background-repeat: no-repeat;
+			background-position: $right 0.618em center;
+			background-size: 32px 20px;
+
+			&.visa {
+				background-image: url("../images/icons/credit-cards/visa.svg");
+			}
+
+			&.mastercard {
+				background-image: url("../images/icons/credit-cards/mastercard.svg");
+			}
+
+			&.laser {
+				background-image: url("../images/icons/credit-cards/laser.svg");
+			}
+
+			&.dinersclub {
+				background-image: url("../images/icons/credit-cards/diners.svg");
+			}
+
+			&.maestro {
+				background-image: url("../images/icons/credit-cards/maestro.svg");
+			}
+
+			&.jcb {
+				background-image: url("../images/icons/credit-cards/jcb.svg");
+			}
+
+			&.amex {
+				background-image: url("../images/icons/credit-cards/amex.svg");
+			}
+
+			&.discover {
+				background-image: url("../images/icons/credit-cards/discover.svg");
+			}
+		}
+
+		span.help {
+			font-size: 0.857em;
+			color: $subtext;
+			font-weight: normal;
+		}
+
+		.form-row {
+			margin: 0 0 20px;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			border: 1em solid var(--color-accent);
+			border-#{$right}-color: transparent;
+			border-#{$left}-color: transparent;
+			border-top-color: transparent;
+			position: absolute;
+			top: -0.75em;
+			#{$left}: 0;
+			margin: side-values(-1em 0 0 2em);
+		}
+	}
+
+	.payment_method_paypal {
+		.about_paypal {
+			text-decoration: underline;
+			font-size: $font__size_small;
+		}
+
+		img {
+			max-height: 52px;
+			vertical-align: middle;
+		}
+	}
+
+	.form-row {
+		select {
+			width: auto;
+		}
+	}
+
+	#place_order {
+		margin: 30px 0 0 0;
+	}
+
+	.woocommerce-privacy-policy-text {
+		font-size: $font__size_small;
+	}
+}

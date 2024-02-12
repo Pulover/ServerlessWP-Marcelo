@@ -1,0 +1,38 @@
+.woocommerce {
+	h2,
+	h3 {
+		&:not(.entry-title) {
+			margin-bottom: 20px;
+			font-size: var(--h3_desktop-font-size);
+		}
+	}
+
+	#order_review_heading {
+		margin-top: var(--h_space);
+	}
+
+	.cart-collaterals,
+	.woocommerce-Tabs-panel {
+		h2 {}
+	}
+
+	.woocommerce-billing-fields,
+	.woocommerce-shipping-fields {
+		h2,
+		h3 {}
+	}
+
+	.related.products {
+		h2 {}
+	}
+
+	.woocommerce-MyAccount-content {
+		h3 {}
+	}
+
+	.woocommerce-Address {
+		.title {
+			h3 {}
+		}
+	}
+}

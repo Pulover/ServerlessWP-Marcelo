@@ -1,0 +1,286 @@
+/* Product Page - Done */
+div.product {
+	&.post-item {
+		margin-bottom: 0;
+	}
+
+	.onsale {
+		position: absolute;
+		z-index: 1;
+		top: 15px;
+		#{$left}: 15px;
+	}
+
+	.summary-wrap-inner {
+		@include flexbox;
+		position: relative;
+
+		> *:not(:last-child) {
+			margin-#{$right}: $primary_space;
+		}
+		@include screen('mobile-landscape-max') {
+			@include flex-direction(column);
+
+			> *:not(:last-child) {
+				margin-#{$right}: 0;
+				margin-bottom: var(--h_space);
+			}
+		}
+
+		> *:not(.onsale) {
+			@include screen('mobile-landscape-max') {
+				width: 100% !important;
+			}
+		}
+	}
+
+	.woocommerce-product-gallery {
+		width: 50%;
+	}
+
+	.summary {
+		width: 50%;
+
+		h1 {
+			margin-bottom: 0;
+		}
+
+		.price {
+			margin-top: 15px;
+			margin-bottom: 0;
+			font-size: 1.6em;
+
+			ins {
+				font-weight: 600;
+				color: var(--color-accent);
+			}
+		}
+	}
+
+	.product_title {
+		margin-bottom: 0;
+		margin-top: 0;
+		clear: both;
+	}
+
+	.woocommerce-product-rating {
+		float: none;
+		@include flexbox;
+		@include align-items(center);
+		margin-top: 15px;
+
+		.star-rating {
+			margin: 0;
+		}
+
+		.woocommerce-review-link {
+			margin-#{$left}: 10px;
+		}
+	}
+
+	.stock {
+		@include second-text;
+		color: var(--color-accent);
+		margin-top: 20px;
+		margin-bottom: 0;
+
+		&.out-of-stock {
+			color: red;
+		}
+	}
+
+	p.stock {
+		margin-top: 15px;
+	}
+
+	.woocommerce-product-details__short-description {
+		margin-top: 20px;
+	}
+
+	form.cart {
+		display: block;
+		margin: 30px 0 0;
+		width: 100%;
+
+		div.quantity {
+			margin-#{$right}: 15px;
+			float: $left;
+			width: 100px;
+		}
+
+		table {
+			border: none;
+
+			div.quantity {
+				float: none;
+				margin: 0;
+			}
+
+			small.stock {
+				display: block;
+				float: none;
+			}
+		}
+
+		.variations {
+			margin: 0;
+			border: 0;
+			width: 100%;
+
+			td,
+			th {
+				border: 0;
+				padding: 0;
+				vertical-align: text-top;
+				padding-bottom: $spacing_element;
+			}
+
+			label {
+				margin-bottom: 0;
+				text-transform: uppercase;
+			}
+
+			select {
+				max-width: 100%;
+				min-width: 75%;
+				display: inline-block;
+				margin-bottom: 0;
+			}
+
+			td.label {
+				padding-#{$right}: 15px;
+			}
+		}
+
+		.woocommerce-variation-description p {
+			margin-bottom: 0;
+		}
+
+		.woocommerce-variation-add-to-cart-enabled,
+		.woocommerce-variation-price {
+			margin-top: 30px;
+		}
+
+		.reset_variations {
+			visibility: hidden;
+			font-size: $font__size_small;
+			color: red;
+		}
+
+		.wc-no-matching-variations {
+			display: none;
+		}
+
+		.button {
+			margin: 0;
+		}
+
+		.group_table {
+			margin-bottom: $spacing_element;
+
+			td {
+				vertical-align: middle;
+				border: 0;
+				padding-#{$left}: 0;
+			}
+		}
+	}
+
+	.product_meta {
+		clear: both;
+		margin-top: 30px;
+		font-size: $font__size_medium;
+
+		> * {
+			display: block;
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.single-shares_bottom {
+		margin-top: 30px;
+	}
+
+	.woocommerce-tabs {
+		margin-top: var(--h_space);
+		clear: both;
+
+		ul.tabs {
+			list-style: none;
+			padding: 0;
+			margin-bottom: 20px;
+			position: relative;
+			border: 0;
+			@include flexbox;
+			@include flex-wrap(wrap);
+			@include align-items(center);
+
+			li {
+				position: relative;
+				z-index: 0;
+				margin: 0;
+
+				a {
+					display: block;
+					font-weight: 600;
+					background-color: transparent;
+					border-color: transparent;
+					padding: 8px 16px;
+					border-radius: var(--button-radius);
+				}
+
+				&.active {
+					a {
+						background-image: linear-gradient(to top left, var(--color-accent) -2500%, #0000 300%);
+					}
+				}
+			}
+		}
+
+		.panel {
+			margin: 0;
+			display: none;
+		}
+	}
+
+	.related,
+	.up-sells {
+		margin-top: var(--h_space);
+	}
+}
+
+.woocommerce-product-gallery__image {
+	a {
+		display: block;
+	}
+}
+
+.thumbs-wrap-inner {
+	display: grid;
+	grid-gap: 10px;
+	margin-top: 10px;
+
+	.woocommerce-product-gallery--columns-3 & {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.woocommerce-product-gallery--columns-4 & {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.woocommerce-product-gallery--columns-5 & {
+		grid-template-columns: repeat(5, 1fr);
+	}
+
+	.woocommerce-product-gallery--columns-6 & {
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	.woocommerce-product-gallery--columns-8 & {
+		grid-template-columns: repeat(8, 1fr);
+	}
+}

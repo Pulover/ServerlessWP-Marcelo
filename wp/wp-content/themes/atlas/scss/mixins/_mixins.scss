@@ -1,0 +1,438 @@
+@import "flex";
+@import "directional"; // Rem output with px fallback
+@function encodecolor($string) {
+	@if type-of($string) == 'color' {
+        $hex: str-slice(ie-hex-str($string), 4);
+        $string:unquote("#{$hex}");
+    }
+    $string: '%23' + $string;
+	@return $string;
+}
+@mixin shadow-box {
+	box-shadow: none;
+}
+@mixin heading-size($heading, $size) {
+	.head#{$heading},
+	h#{$heading} {
+		font-size: $size;
+	}
+}
+@mixin limit-line($limit) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $limit;
+    overflow: hidden;
+}
+// Primary text typography
+@mixin primary-text {
+    font-family: var(--primary_text-font-family);
+    font-weight: var(--primary_text-font-weight);
+    font-style: var(--primary_text-font-style);
+    font-size: var(--primary_text-font-size);
+    letter-spacing: var(--primary_text-letter-spacing);
+    line-height: var(--primary_text-line-height);
+}
+// Secondary text typography
+@mixin second-text {
+    font-family: var(--second_text-font-family);
+    font-weight: var(--second_text-font-weight);
+    font-style: var(--second_text-font-style);
+    text-transform: var(--second_text-text-transform);
+    font-size: var(--second_text-font-size);
+    letter-spacing: var(--second_text-letter-spacing);
+    line-height: var(--second_text-line-height);
+	color: var(--light-text-color-lighter-rgba);
+
+    .bg-dark & {
+        color: var(--dark-text-color-lighter-rgba);
+    }
+
+	a {
+		color: var(--light-text-color-lighter-rgba);
+
+	    .bg-dark & {
+	        color: var(--dark-text-color-lighter-rgba);
+	    }
+	}
+}
+// Heading text typography
+@mixin heading-text {
+    font-family: var(--font_heading-font-family);
+    font-weight: var(--font_heading-font-weight);
+    font-style: var(--font_heading-font-style);
+    text-transform: var(--font_heading-text-transform);
+    line-height: var(--font_heading-line-height, normal);
+    letter-spacing: var(--font_heading-letter-spacing);
+}
+// Accent background & color
+@mixin accent-background {
+    background-color: var(--color-accent);
+    color: var(--color-accent-text);
+
+	a {
+		color: var(--color-accent-text);
+	}
+}
+// Button
+@mixin button {
+    position: relative;
+    outline: 0;
+    cursor: pointer;
+    display: inline-flex;
+	@include align-items(center);
+	@include justify-content(center);
+	gap: 8px;
+    height: $form_height;
+    line-height: calc(#{$form_height} - (var(--btn-line-size) * 2));
+    padding: 0 1.6em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    border: none;
+	box-shadow: none !important;
+    border-radius: var(--button-radius);
+    @include user-select(none);
+    @include transition(all, 0.2s, linear);
+}
+@mixin button_insert {
+    outline: 0;
+    cursor: pointer;
+    display: inline-block;
+	border-radius: var(--button-radius);
+    text-align: center;
+    white-space: nowrap;
+	box-shadow: none !important;
+    @include user-select(none);
+    @include transition(all, 0.2s, linear);
+    border: none;
+}
+@mixin btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-accent-text);
+}
+@mixin btn-white-skin-light {
+	background-color: var(--light-sec-bg-color);
+    color: var(--light-text-color-heavier-rgba);
+	background-image: linear-gradient(to top left, var(--color-accent) -2500%,#0000 300%);
+}
+@mixin btn-white-skin-dark {
+	background-color: var(--dark-sec-bg-color);
+    color: var(--dark-text-color-heavier-rgba);
+	background-image: linear-gradient(to top left, var(--color-accent) -2500%,#0000 300%);
+}
+@mixin btn-black-skin-light {
+	background-color: var(--dark-bg-color);
+    color: var(--dark-text-color-heavier-rgba);
+	background-image: linear-gradient(to top left, var(--color-accent) -2500%,#0000 300%);
+}
+@mixin btn-black-skin-dark {
+	background-color: var(--light-bg-color);
+    color: var(--light-text-color-heavier-rgba);
+    background-image: linear-gradient(to top left, var(--color-accent) -2500%,#0000 300%);
+}
+
+
+// Text button
+@mixin button-text {
+    width: auto;
+    height: auto;
+    line-height: inherit;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+// Heading size ratio
+@mixin heading-ratio($ratio) {
+    $sizes: (
+        1: 6,
+        2: 5,
+        3: 4,
+        4: 3,
+        5: 2,
+        6: 1,
+    );
+    $val: var(--primary_text-font-size);
+    @each $i, $heading in $sizes {
+        @if $i != 1 {
+            $val: #{$val} * #{$ratio};
+        }
+
+        .h#{$heading},
+        h#{$heading} {
+            font-size: calc(#{$val});
+        }
+    }
+}
+// Width Flex Column
+@mixin width-flex($width) {
+    flex: 0 0 $width;
+    max-width: $width;
+}
+// User select
+@mixin user-select($value: none) {
+	-webkit-user-select: $value;  /* Chrome all / Safari all */
+	-moz-user-select: $value;     /* Firefox all */
+	-ms-user-select: $value;
+    user-select: $value;
+}
+// Icon SVG background
+@mixin icon-svg-bg($size, $url, $position: center) {
+	-webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+	-webkit-mask-position: $position;
+    mask-position: $position;
+	-webkit-mask-size:$size;
+    mask-size: $size;
+	-webkit-mask-image: $url;
+    mask-image: $url;
+
+}
+// Center block
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+// Clearfix
+@mixin clearfix() {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+// WooCommerce Icons
+@mixin iconwoo($glyph: "\eb96") {
+    font-family: "woo";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+    display: inline-block;
+    text-decoration: inherit;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: $glyph;
+}
+@mixin iconbefore($glyph: "\e001") {
+    font-family: "WooCommerce";
+    speak: never;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 0.618em;
+    content: $glyph;
+    text-decoration: none;
+}
+@mixin iconafter($glyph: "\e001") {
+    font-family: "WooCommerce";
+    speak: never;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    margin-left: 0.618em;
+    content: $glyph;
+    text-decoration: none;
+}
+@mixin loader() {
+    &::before {
+        height: 1em;
+        width: 1em;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -0.5em;
+        margin-top: -0.5em;
+        content: "";
+        animation: spin 1s ease-in-out infinite;
+        background: url("../images/icons/loader.svg") center center;
+        background-size: cover;
+        line-height: 1;
+        text-align: center;
+        font-size: 2em;
+        color: rgba(#000, 0.75);
+    }
+}
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+    width: map-get($columns, $numberColumns) - (($columns__margin * ($numberColumns - 1)) / $numberColumns);
+}
+@mixin screen($size:'small-mobile-min') {
+    @if $size == 'small-mobile-min' {
+        @media screen and (min-width: $breakpoint-small-mobile-min) {
+            @content;
+        }
+    } @else
+    if $size == 'small-mobile-max' {
+        @media screen and (max-width: $breakpoint-small-mobile-max) {
+            @content;
+        }
+    } @else
+    if $size == 'mobile-landscape-min' {
+        @media screen and (min-width: $breakpoint-landscape-mobile-min) {
+            @content;
+        }
+    } @else
+	if $size == 'mobile-landscape-max' {
+        @media screen and (max-width: $breakpoint-landscape-mobile-max) {
+            @content;
+        }
+    } @else
+    if $size == 'mobile-min' {
+        @media screen and (min-width: $breakpoint-mobile-min) {
+            @content;
+        }
+    } @else
+    if $size == 'mobile-max' {
+        @media screen and (max-width: $breakpoint-mobile-max) {
+            @content;
+        }
+    } @else
+    if $size == 'tablet-min' {
+        @media screen and (min-width: $breakpoint-tablet-min) {
+            @content;
+        }
+    } @else
+    if $size == 'tablet-max' {
+        @media screen and (max-width: $breakpoint-tablet-max) {
+            @content;
+        }
+    } @else
+    if $size == 'desktop-min' {
+        @media screen and (min-width: $breakpoint-desktop-min) {
+            @content;
+        }
+    } @else {
+        @media screen and (max-width: $breakpoint-desktop-max) {
+            @content;
+        }
+    }
+}
+@mixin screen_min($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
+@mixin screen_max($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+// Define vertical, horizontal, or both position
+@mixin center($position) {
+    position: absolute;
+
+    @if $position == 'vertical' {
+        top: 50%;
+        transform: translateY(-50%);
+    } @else
+    if $position == 'horizontal' {
+        left: 50%;
+        transform: translate(-50%);
+    } @else
+    if $position == 'both' {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+// Create the mixin for retina image-2x
+@mixin image-2x($image, $width, $height) {
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        background-image: url($image);
+        background-size: $width $height;
+    }
+}
+// Placeholder
+@mixin placeholder {
+    &::placeholder {
+        @content;
+    }
+
+    &:-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+// Shadow
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        box-shadow: inset $top $left $blur $color;
+    } @else {
+        box-shadow: $top $left $blur $color;
+    }
+}
+// Transition
+@mixin transition($transition-property, $transition-time, $method) {
+    transition: $transition-property $transition-time $method;
+}
+// Transform
+@mixin transform($transforms) {
+    transform: $transforms;
+}
+// Animation mixin setup
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+@mixin animation($str) {
+    animation: #{$str};
+}
+// =============================================================================
+// String Replace
+// =============================================================================
+@function str-replace($string, $search, $replace: "") {
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+}
+// =============================================================================
+// Font Face
+// =============================================================================
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+    $src: null;
+    $extmods: (
+        eot: "?",
+        svg: "#" + str-replace($name, " ", "_")
+    );
+    $formats: (
+        otf: "opentype",
+        ttf: "truetype"
+    );
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}

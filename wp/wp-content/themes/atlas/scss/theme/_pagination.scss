@@ -1,0 +1,183 @@
+/*--------------------------------------------------------------
+# Pagination
+--------------------------------------------------------------*/
+.page-links {
+    @include flexbox;
+    font-size: $font__size_small;
+    gap: 8px;
+
+    .post-page-numbers {
+        span {
+            display: inline-block;
+            padding: 0;
+            width: $form_tiny_height;
+            height: $form_tiny_height;
+            @include transition(all, 0.2s, linear);
+            border-radius: var(--button-radius);
+            border: var(--btn-line-size) solid transparent;
+            line-height: calc(#{$form_tiny_height} - (var(--btn-line-size) * 2));
+            text-align: center;
+            @include btn-white-skin-light;
+
+            &.current,
+            &:hover {
+                @include btn-accent;
+            }
+
+            &.next,
+            &.prev {
+                background: transparent !important;
+                color: currentColor !important;
+                border: none;
+                width: auto;
+                padding: 0 12px;
+            }
+        }
+
+        &.current {
+            span {
+                @include btn-accent;
+            }
+        }
+    }
+}
+
+.pagination {
+    @include flexbox;
+    font-size: $font__size_small;
+    gap: 8px;
+
+    .pagi-item {
+        display: inline-block;
+        padding: 0;
+        width: $form_tiny_height;
+        height: $form_tiny_height;
+        @include transition(all, 0.2s, linear);
+        border-radius: var(--button-radius);
+        border: var(--btn-line-size) solid transparent;
+        line-height: calc(#{$form_tiny_height} - (var(--btn-line-size) * 2));
+        text-align: center;
+        @include btn-white-skin-light;
+
+        &.pagi-item-current {
+            @include btn-accent;
+        }
+    }
+
+    .pagi-item-dot,
+    .pagi-item-first,
+    .pagi-item-last,
+    .pagi-item-next,
+    .pagi-item-prev {
+        font-size: 15px;
+        line-height: calc(#{$form_tiny_height} + (var(--btn-line-size) * 2));
+    }
+
+    .pagi-item-dot {
+        background: transparent;
+        border: 0;
+        line-height: calc(#{$form_tiny_height} + (var(--btn-line-size) * 4));
+    }
+}
+/* Ajax Pagination */
+.nav-wrap {
+    @include flexbox;
+    margin-top: var(--h_space);
+
+    &.text-center {
+        @include justify-content(center);
+    }
+
+    &.text-left {
+        @include justify-content(flex-start);
+    }
+
+    &.nav-wrap-next-prev {
+        .nav-wrap-inner {
+            @include flexbox;
+            @include justify-content(space-between);
+            width: 100%;
+            gap: 20px;
+        }
+    }
+
+    &.nav-wrap-infinite {
+        margin: 0 !important;
+
+        .module-infinite {
+            height: calc(var(--loader-size_small) + var(--h_space));
+
+            &.btn-disabled {
+                height: 0;
+            }
+        }
+
+        .nav-wrap-inner {
+            overflow: visible;
+
+            .pagi-loader {
+                position: absolute;
+                top: auto;
+                margin-top: 0;
+                #{$right}: 50%;
+                margin-#{$right}: calc((var(--loader-size_small) / 2) * -1);
+                bottom: 0;
+            }
+        }
+    }
+}
+
+.nav-wrap-inner {
+    position: relative;
+    overflow: visible;
+
+    .pagi-loader {
+        position: absolute;
+        top: 50%;
+        #{$right}: calc((var(--loader-size_small) + 15px) * -1);
+        margin-top: calc((var(--loader-size_small) / 2) * -1);
+        width: auto;
+        height: auto;
+        z-index: 9;
+    }
+}
+
+.btn-pagi {
+    margin: 0;
+
+    &::after {
+        content: '';
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        background-color: currentColor;
+        @include icon-svg-bg(12px, #{$arrow_long_right});
+
+        @include if-rtl {
+            transform: rotate(180deg);
+        }
+    }
+
+    &.btn-disabled {
+        &::after {
+            display: none;
+        }
+    }
+
+    &.btn-text {
+        &::after {
+            color: var(--color-accent);
+        }
+    }
+
+    &.nextprev-more.prev-posts {
+        &::after {
+            order: -1;
+            transform: rotate(180deg);
+
+            @include if-rtl {
+                transform: rotate(0);
+            }
+        }
+    }
+}

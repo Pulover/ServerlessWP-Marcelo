@@ -1,0 +1,77 @@
+/*--------------------------------------------------------------
+# Advertisement
+--------------------------------------------------------------*/
+.banner-box {
+    @include flexbox;
+    @include justify-content(center);
+}
+
+.banner-box-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+
+    ins {
+        background-color: transparent;
+    }
+}
+
+.banner-url {
+    position: absolute;
+    top: 0;
+    #{$right}: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hook-param {
+    height: 1px;
+    width: 100%;
+    background-color: transparent;
+    margin-top: -1px;
+    margin-left: auto;
+    margin-right: auto;
+    @include screen('desktop-min') {
+        max-width: calc(var(--site_width) * 1px);
+    }
+}
+
+.hook-side {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+        @include screen('desktop-min') {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.hook-left {
+    transform: translateX(-100%);
+}
+
+.hook-right {
+    transform: translateX(100%);
+}
+
+.adv,
+.ads {
+    .post-item {
+        margin-bottom: 0;
+    }
+}
+
+.ads-post-before {
+    margin-bottom: var(--h_space);
+}
+
+.ads-post-after,
+.ads-post-ajax {
+    margin-top: var(--h_space);
+}

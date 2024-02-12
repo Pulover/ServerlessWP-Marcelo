@@ -1,0 +1,47 @@
+/*--------------------------------------------------------------
+# Media Captions
+--------------------------------------------------------------*/
+.blocks-gallery-caption,
+.gallery-caption,
+.wp-caption-text,
+figcaption {
+    @include second-text;
+    text-align: center;
+}
+
+figcaption {
+    .wp-block-audio &,
+    .wp-block-embed &,
+    .wp-block-image &,
+    .wp-block-table &,
+    .wp-block-video & {
+        margin-top: $caption_gap;
+        margin-bottom: 0;
+    }
+
+    .blocks-gallery-image &,
+    .blocks-gallery-item & {
+        .blocks-gallery-grid &,
+        .wp-block-gallery & {
+            padding: 1em;
+        }
+    }
+}
+
+.wp-caption {
+    max-width: 100%;
+
+    img[class*="wp-image-"] {
+        @include center-block;
+    }
+
+    .wp-caption-text {
+        margin: $caption_gap 0 0;
+    }
+}
+
+.blocks-gallery-caption {
+    text-align: center;
+    margin-#{$left}: auto;
+    margin-#{$right}: auto;
+}

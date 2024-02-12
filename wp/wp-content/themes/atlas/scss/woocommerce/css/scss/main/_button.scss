@@ -1,0 +1,14 @@
+/* Buttons - Done */
+#respond input#submit,
+a.button,
+button.button,
+input.button {
+
+	&.disabled,
+	&.loading,
+	&:disabled,
+	&:disabled[disabled] {
+		cursor: not-allowed;
+		opacity: 0.5 !important;
+	}
+}

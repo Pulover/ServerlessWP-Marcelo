@@ -1,0 +1,34 @@
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	padding: var(--box-padding);
+	border-radius: var(--box-radius);
+	margin: 0 0 var(--h_space) !important;
+	position: relative;
+	list-style: none outside;
+	background-color: transparent;
+	@include clearfix;
+	width: auto;
+	word-wrap: break-word;
+	@include accent-background;
+
+	.bg-dark & {
+		border-color: var(--dark-line-color-rgba);
+	}
+
+	a {
+		color: var(--color-accent-text) !important;
+		text-decoration: underline;
+	}
+
+	.button {
+		@include button-text;
+		float: $right;
+		color: var(--color-accent-text) !important;
+		text-decoration: underline;
+	}
+
+	&::after {
+
+	}
+}

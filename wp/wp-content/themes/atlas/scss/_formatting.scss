@@ -1,0 +1,94 @@
+/*--------------------------------------------------------------
+# Formatting
+--------------------------------------------------------------*/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+.hidden {
+	display: none;
+}
+
+.text-capitalize {
+	text-transform: capitalize;
+}
+
+.text-lowercase {
+	text-transform: lowercase;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.wp-block-cover {
+    color: #fff;
+}
+
+/* Text Alignments */
+.text-left {
+	text-align: $left;
+	@include justify-content(flex-start);
+}
+
+.text-right {
+	text-align: $right;
+	@include justify-content(flex-end);
+}
+
+.text-center {
+	text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+	&:focus {
+		background-color: #eee;
+		clip: auto !important;
+		clip-path: none;
+		color: #444;
+		display: block;
+		font-size: 1em;
+		height: auto;
+		#{$left}: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+}
+
+.img-hidden {
+	display: none !important;
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/* Warning */
+.th90-warning {
+	a {
+		text-decoration: underline !important;
+	}
+}

@@ -1,0 +1,103 @@
+/* Star ratings */
+.star-rating {
+	overflow: hidden;
+	position: relative;
+	height: 1em;
+	line-height: 1;
+	font-size: 13px;
+	width: 5em;
+	text-align: $left;
+
+	&::before {
+		@include iconwoo("\f18b\f18b\f18b\f18b\f18b");
+		float: $left;
+		top: 0;
+		#{$left}: 0;
+		position: absolute;
+		color: var(--light-text-color-heavier-rgba);
+
+		.bg-dark & {
+			color: var(--dark-text-color-heavier-rgba);
+		}
+	}
+
+	span {
+		overflow: hidden;
+		float: $left;
+		top: 0;
+		#{$left}: 0;
+		position: absolute;
+		padding-top: 1em;
+	}
+
+	span::before {
+		@include iconwoo("\f186\f186\f186\f186\f186");
+		top: 0;
+		position: absolute;
+		#{$left}: 0;
+		color: var(--light-text-color-heavier-rgba);
+
+		.bg-dark & {
+			color: var(--dark-text-color-heavier-rgba);
+		}
+	}
+}
+
+.hreview-aggregate .star-rating {
+	margin: 10px 0 0;
+}
+
+p.stars {
+	font-size: 13px;
+
+	a {
+		position: relative;
+		height: 1em;
+		width: 1em;
+		text-indent: -999em;
+		display: inline-block;
+		text-decoration: none !important;
+		float: $left;
+		color: var(--light-text-color-heavier-rgba);
+
+		.bg-dark & {
+			color: var(--dark-text-color-heavier-rgba);
+		}
+
+		&::before {
+			display: block;
+			position: absolute;
+			top: 0;
+			#{$left}: 0;
+			width: 1em;
+			height: 1em;
+			line-height: 1;
+			@include iconwoo("\f18b");
+			text-indent: 0;
+		}
+
+		&:hover ~ a::before {
+			@include iconwoo("\f18b");
+		}
+	}
+
+	&:hover a::before {
+		@include iconwoo("\f186");
+	}
+
+	&.selected {
+		a.active {
+			&::before {
+				@include iconwoo("\f186");
+			}
+
+			~ a::before {
+				@include iconwoo("\f18b");
+			}
+		}
+
+		a:not(.active)::before {
+			@include iconwoo("\f186");
+		}
+	}
+}

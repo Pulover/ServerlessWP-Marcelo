@@ -1,0 +1,65 @@
+/* Newsletter Widget */
+.newsletter-desc {
+    margin-bottom: 30px;
+}
+/* MC4WP - Mailchimp */
+.mc4wp-response {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.mc4wp-form-fields {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+
+    > * {
+        margin-bottom: 15px;
+    }
+
+    input[type='submit'] {
+        width: 100%;
+    }
+
+    .custom-mailchimp {
+        width: 100%;
+        margin: 0 auto;
+        @include flexbox;
+        @include justify-content(center);
+        border-radius: var(--button-radius);
+        border: var(--btn-line-size) solid var(--light-line-color-rgba);
+        color: var(--light-text-color-rgba);
+        overflow: hidden;
+
+        > *:first-child {
+            width: 100%;
+        }
+
+        .bg-dark & {
+            border: var(--btn-line-size) solid var(--dark-line-color-rgba);
+            color: var(--dark-text-color-rgba);
+        }
+
+        button,
+        input,
+        p,
+        label {
+            box-shadow: none;
+            margin-bottom: 0 !important;
+        }
+
+        input {
+            border-radius: 0;
+        }
+
+        input:not([type='submit']) {
+            border: none;
+        }
+
+        input[type='submit'] {
+            margin: calc(var(--btn-line-size) * -1) !important;
+            height: calc(#{$form-height} + (var(--btn-line-size) * 2));
+            width: auto;
+        }
+    }
+}

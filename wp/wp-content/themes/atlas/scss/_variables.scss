@@ -1,0 +1,132 @@
+$root: (
+    --site_width_amp: 880,
+    --primary_space: 30px,
+    --h_space: 30px,
+    --v_space: 30px,
+    --line-size: 1px,
+    --box-line-size: 1px,
+    --btn-line-size: 1px,
+    --box-radius: calc(var(--box_radius,6) * 1px),
+    --button-radius: calc(var(--button_radius,10) * 1px),
+    --image-radius: calc(var(--image_radius,10) * 1px),
+    --box-padding: 20px,
+    --box-padding-small: 10px,
+    --shadow-size: 0,
+    --loader-size: 36px,
+    --loader-size_small: 24px,
+    --container-default-padding-top: 0,
+    --container-default-padding-bottom: 0,
+    --container-default-padding-left: 0,
+    --container-default-padding-right: 0,
+    --gallery-block--gutter-size: 15px,
+    --off-overlay-light: var(--off_overlay_light-rgba,#f5f8fa),
+    --off-overlay-dark: var(--off_overlay_dark-rgba,#161617),
+);
+$root_mobile: (
+    --primary_space: 20px,
+);
+// General
+$font__safe: Arial, Helvetica, sans-serif;
+$font__code: Menlo, monaco, Consolas, Lucida Console, monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__size_medium: 0.92rem;
+$font__size_small: 0.85rem;
+$font__size_tiny: 0.8rem;
+$small_thumb_size: 80px;
+
+// White Space
+$primary_space: var(--primary_space);
+$column_space: var(--primary_space);
+$post_space_small: 30px;
+$post_space_medium: 40px;
+$post_space_large: 50px;
+$post_space_huge: 60px;
+
+// Element Spacing
+$spacing_element: 35px;
+$spacing_element_small: 12px;
+$caption_gap: 0.5em;
+// Forms
+$form_height: 45px;
+$form_tiny_height: 30px;
+$form_small_height: 38px;
+$form_large_height: 56px;
+// Icon Button
+$btn_icon_huge: 22px;
+$btn_icon_large: 18px;
+$btn_icon_medium: 15px;
+$btn_icon_small: 13px;
+$btn_icon_tiny: 12px;
+// Circle Button
+$circle_small: 50px;
+$circle_medium: 80px;
+$circle_large: 110px;
+// Responsive widths.
+$breakpoint-small-mobile-min: 576px;
+$breakpoint-mobile-min: 768px;
+$breakpoint-landscape-mobile-min: 881px;
+$breakpoint-tablet-min: 1025px;
+$breakpoint-desktop-min: 1201px;
+$breakpoint-small-mobile-max: 575px;
+$breakpoint-mobile-max: 767px;
+$breakpoint-landscape-mobile-max: 880px;
+$breakpoint-tablet-max: 1024px;
+$breakpoint-desktop-max: 1200px;
+// Social Colors
+$facebook_color: #062db9;
+$twitter_color: #20a1eb;
+$instagram_color: #fd7658;
+$linkedin_color: #0b69f5;
+$youtube_color: #eb2020;
+$pinterest_color: #eb2020;
+$github_color: #000;
+$twitch_color: #830899;
+$tiktok_color: #000;
+
+$tumblr_color: #34526f;
+$telegram_color: #1F9BDA;
+$behance_color: #053eff;
+$dribbble_color: #e84d88;
+$skype_color: #28abe3;
+$soundcloud_color: #fe3801;
+$flickr_color: #ff0084;
+$snapchat_color: #fffc00;
+$digg_color: #111;
+$vimeo_color: #51b5e7;
+$reddit_color: #F63E05;
+$vkontakte_color: #5a7fa6;
+$whatsapp_color: #3FE675;
+$medium_color: #11100E;
+$rss_color: #f26109;
+$email_color: #2196F3;
+$mixcloud_color: #26394B;
+$vine_color: #00b389;
+$xing_color: #005a60;
+$google_color: #cf3e28;
+$envato_color: #82b641;
+$mailchimp_color: #2c9ab7;
+$mailpoet_color: #F14176;
+$mymail_color: #28b4e9;
+$foursquare_color: #f94877;
+$s500px_color: #00aeef;
+$steam_color: #111;
+$goodreads_color: #A06E0A;
+$posts_color: #9b59b6;
+$comments_color: #1abc9c;
+$members_color: #dc5034;
+$groups_color: #788cb6;
+$forums_color: #88aca1;
+$topics_color: #613854;
+$replies_color: #71c6c1;
+
+// SVG icons
+$heading_sep: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 115 15'%3E%3Cpath d='M79.8 14.5 57.3 5.7l-22.5 8.8-22.6-8.8-10.3 4L0 4.8 12.2 0l22.6 8.8L57.3 0l22.5 8.8L102.4 0l12.2 4.8-2 4.9-10.2-4z'/%3E%3C/svg%3E");
+$arrow_menu_down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m12 13.171 4.95-4.95 1.414 1.415L12 16 5.636 9.636 7.05 8.222l4.95 4.95Z'/%3E%3C/svg%3E");
+$arrow_menu_down_white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='rgba(255,255,255,1)' d='m12 13.171 4.95-4.95 1.414 1.415L12 16 5.636 9.636 7.05 8.222l4.95 4.95Z'/%3E%3C/svg%3E");
+$arrow_menu_right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m13.171 12-4.95-4.95 1.415-1.413L16 12l-6.364 6.364-1.414-1.415 4.95-4.95Z'/%3E%3C/svg%3E");
+$arrow_long_right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l73.4 73.4H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h370.7l-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z'/%3E%3C/svg%3E");
+$loading: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 15a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1Zm8.66-10a1 1 0 0 1-.366 1.366l-2.598 1.5a1 1 0 1 1-1-1.732l2.598-1.5A1 1 0 0 1 20.66 7ZM7.67 14.5a1 1 0 0 1-.367 1.366l-2.598 1.5a1 1 0 1 1-1-1.732l2.598-1.5a1 1 0 0 1 1.366.366ZM20.66 17a1 1 0 0 1-1.366.366l-2.598-1.5a1 1 0 0 1 1-1.732l2.598 1.5A1 1 0 0 1 20.66 17ZM7.67 9.5a1 1 0 0 1-1.367.366l-2.598-1.5a1 1 0 1 1 1-1.732l2.598 1.5A1 1 0 0 1 7.67 9.5Z'/%3E%3C/svg%3E");
+$plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2h6Z'/%3E%3C/svg%3E");
+$minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 11v2h14v-2H5Z'/%3E%3C/svg%3E");
+$cart: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2.123 4.25h2.166a.25.25 0 0 1 .246.205l1.701 9.358a1.75 1.75 0 0 0 1.722 1.437h11.363c.82 0 1.531-.57 1.708-1.37l1.556-7a1.75 1.75 0 0 0-1.708-2.13H9.123a.75.75 0 0 0 0 1.5h11.754a.251.251 0 0 1 .244.304l-1.556 7a.25.25 0 0 1-.244.196H7.958a.25.25 0 0 1-.246-.205L6.011 4.187A1.752 1.752 0 0 0 4.289 2.75H2.123a.75.75 0 0 0 0 1.5zm16 11.5a2.75 2.75 0 1 0 0 5.5 2.75 2.75 0 1 0 0-5.5zm-8.5 0a2.75 2.75 0 1 0 0 5.5 2.75 2.75 0 1 0 0-5.5z'/%3E%3C/svg%3E");
+$check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m10 15.17 9.193-9.191 1.414 1.414-10.606 10.606-6.364-6.364 1.414-1.414 4.95 4.95Z'/%3E%3C/svg%3E");

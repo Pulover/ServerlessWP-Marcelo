@@ -1,0 +1,131 @@
+/* Tables - Done */
+table.shop_attributes {
+	width: 100%;
+
+	tr {
+		display: inline-block;
+		float: $left;
+		margin-#{$right}: 30px;
+	}
+
+	th {
+		display: inline-block;
+		text-transform: uppercase;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		float: $left;
+		margin-#{$right}: 10px;
+	}
+
+	td {
+		display: inline-block;
+		padding: 0;
+		border: 0;
+		float: $left;
+	}
+}
+
+table.shop_table {
+	margin: 0;
+	border: 0;
+	text-align: $left;
+	width: 100%;
+	//@include heading-text;
+
+	tbody {
+		.cart-subtotal,
+		.cart_item {
+			//@include heading-text;
+		}
+	}
+
+	thead {
+		@include heading-text;
+	}
+
+	td,
+	th {
+		padding: 15px 10px;
+		vertical-align: middle;
+		word-break: normal;
+
+		&:first-child {
+			padding-#{$left}: 0;
+		}
+
+		&:last-child {
+			padding-#{$right}: 0;
+		}
+	}
+
+	td.product-thumbnail {
+		width: 80px;
+
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	td.product-remove {
+		@include screen('small-mobile-min') {
+			width: 30px;
+		}
+	}
+
+	td.product-price,
+	td.product-quantity,
+	td.product-subtotal {
+		@include screen('small-mobile-min') {
+			width: 15%;
+		}
+	}
+
+	.actions {
+		text-align: $right;
+
+		.button {
+			margin: 0;
+			margin-#{$left}: 5px;
+		}
+	}
+
+	.coupon {
+		float: $left;
+
+		label {
+			display: none;
+		}
+
+		#coupon_code {
+			width: auto;
+			float: $left;
+			margin-#{$right}: 5px;
+			@include screen('small-mobile-max') {
+				width: 50%;
+				margin-#{$right}: 0;
+			}
+		}
+	}
+
+	.amount,
+	strong.product-quantity {
+		color: var(--light-text-color-heavier-rgba);
+
+		.bg-dark & {
+			color: var(--dark-text-color-heavier-rgba);
+		}
+	}
+
+	ul.wc-item-meta {
+		margin: 10px 0 0;
+
+		li {
+			list-style: none;
+
+			> * {
+				display: inline-block;
+			}
+		}
+	}
+}
